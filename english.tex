@@ -1,0 +1,184 @@
+%%%%
+% MTecknology's Resume
+%%%%
+% Author: George Fam
+% License: CC-BY-4
+% - https://creativecommons.org/licenses/by/4.0/legalcode.txt
+%%%%
+\documentclass[letterpaper,10pt]{article}
+\usepackage{mteck}
+\usepackage{fancyhdr}
+
+%===================%
+% George Fam's Resume %
+%===================%
+
+%\numberedPages % NOTE: lastpage requires a second build
+%\documentFooter{\tab \thepage \ / 2} % Does similar without using lastpage
+\begin{document}
+  %---------%
+  % Heading %
+  %---------%
+  \documentTitle{George Fam}{
+    % Web Version
+    %\raisebox{-0.05\height} \faPhone\ [redacted - web copy] ~
+    %\raisebox{-0.15\height} \faEnvelope\ [redacted - web copy] ~
+    %%
+    \href{tel:5146639709}{
+      \raisebox{-0.05\height} \faPhone\ 514-663-9709} ~ | ~
+    \href{mailto:george.fam@famcode.net}{
+      \raisebox{-0.15\height} \faEnvelope\ george.fam@famcode.net} ~ | ~
+    \href{https://www.linkedin.com/in/george-fam/}{
+      \raisebox{-0.15\height} \faLinkedin\ linkedin.com/in/george-fam}
+  }
+
+  %---------%
+  % Summary %
+  %---------%
+
+  \tinysection{Summary}
+  Computer science and software engineering student at UQAM, passionate about designing robust software and IT systems. As a pharmacy technician, I developed essential skills in communication, multitasking, and problem-solving.
+  %--------%
+  % Skills %
+  %--------%
+
+  \section{Skills}
+
+  \begin{multicols}{2}
+    \begin{itemize}[itemsep=-2px, parsep=5pt, leftmargin=75pt]
+      \item[\textbf{Prog. Lang.}] Java, C, C++, Bash, HTML/CSS/JS
+      \item[\textbf{Tools}] Git, Maven, Jira, Docker, Podman, SQLite
+      \item[\textbf{Tests}] Jenkins, JUnit, BATS
+      \item[\textbf{OS}]  Windows, Linux (Arch, Debian, Ubuntu)
+      \item[\textbf{Methodologies}]  Scrum, Kanban, Agile
+      \item[\textbf{Soft Skills}]  Communication, Travail d'équipe, Résolution de conflits, Écoute active, Service client
+      \item[\textbf{Pharmacy}]  RxPro, AssystRx,Ubiq, Empego, Magistrale, Commande de médicaments, Préparation des ordonnances
+      \item[\textbf{Languages}]  Français, Anglais, Arabe
+    \end{itemize}
+  \end{multicols}
+
+  %------------%
+  % Experience %
+  %------------%
+
+  \section{Technical Experience}
+
+  \headingBf{Computer Science Teaching Assistant}{Oct. 2024 -- Present}
+  \headingIt{UQÀM | Université de Québec à Montréal}{}
+  \begin{resume_list}
+    \itemTitle{Lab Demonstrator}
+    \item Demonstrating labs for the courses: INF1070 (System Usage and Administration) and INF2050 (Software Dev. Tools and Practices) for Winter 2025
+    \begin{itemize}
+    \item{Providing hands-on guidance to students by explaining concepts and answering technical questions}
+    \end{itemize}
+    \vspace{3pt}
+    \itemTitle{Exam/Project Grader}
+    \item Grading exams for INF2050 for Fall 2024
+    \begin{itemize}
+    \item{Ensuring rigorous and objective grading in accordance with established guidelines}
+    \end{itemize}
+    \itemTitle{Workshops}
+    \item Linux Installation Workshop
+    \begin{itemize}
+    \item{Assist with and troubleshoot Linux installation and configuration}
+    \end{itemize}
+  \end{resume_list}
+
+   \section{Additional Experience}
+
+  \headingBf{Pharmacy Technician}{Sept. 2022 -- Present}
+  \headingIt{BeLocum}{Aug. 2023 -- Present}
+  \headingIt{Jean Coutu}{Sept. 2022 -- Present}
+  \begin{resume_list}
+    \item Accurately and efficiently interpret and input prescriptions using RxPro, AssystRx, and Ubiq
+  \end{resume_list}
+
+  \headingBf{Tutor}{Oct. 2022 -- June 2023}
+  \headingIt{Pierrefonds Community Project}{}
+  \begin{resume_list}
+    \item Design and lead engaging extracurricular tutoring sessions for students
+    \item Assist students with homework and exam preparation
+    \item Organize small group learning sessions and interactive games to boost academic motivation
+    \item Develop and implement additional exercises to improve student understanding
+    \item Correct exercises to help students identify and learn from their mistakes
+  \end{resume_list}
+
+  \headingBf{Senior Customer Service Representative}{Juil. 2018 -- Juil. 2020}
+  \headingIt{Couche-Tard}{}
+  \begin{resume_list}
+    \item Train new team members on point-of-sale systems and customer service
+  \end{resume_list}
+
+  %-----------%
+  % Education %
+  %-----------%
+
+  \section{Education}
+
+  \headingBf{Bachelor's Degree, Computer Science and Software Engineering}{2023 -- Ongoing} % Note: Adding year(s) exposes an implied age
+  \headingIt{UQÀM | Université de Québec à Montréal}{}
+  \vspace{10pt}
+  \headingBf{Double DEC, Science and Social Science}{2023} % Note: Adding year(s) exposes an implied age
+  \headingIt{CEGEP John Abbott}{}
+  \pagebreak
+
+    %----------------------------%
+  % Extracurricular Activities %
+  %----------------------------%
+
+  \section{Projects}
+
+  \headingBf{INF2120 (Programming  II)}{Java, JUnit, Swing}
+  \begin{resume_list}
+    \item Design algorithms from interfaces
+    \vspace{2pt}
+    \item Develop a virtual robot emulator
+    \vspace{2pt}
+    \item Develop features for a Tower Defense-style game using Swing
+    \vspace{2pt}
+    \item Design and manage data structures such as disjoint sets to model sorted intervals
+    \vspace{2pt}
+    \item Create unit tests to ensure the robustness and reliability of implemented features
+    
+  \end{resume_list}
+
+  \headingBf{INF2050 (Software Dev. Tools and Practices)}{Java, JUnit, Maven}
+  \begin{resume_list}
+    \item Develop an application to calculate the property value of lands based on input JSON data, with JSON output generation
+    \vspace{2pt}
+    \item Use Maven for dependency management, compilation, and generating executable JAR files
+    \vspace{2pt}
+    \item Write and execute automated unit tests using Maven and JUnit
+  \end{resume_list}
+  
+  \headingBf{INF3135 (Software Construction and Maintenance)}{C, Bash, BATS}
+  \begin{resume_list}
+    \item Develop the video game *Circles*, inspired by *Super Hexagon*, using the SDL2 library for graphic programming and animation
+    \vspace{2pt}
+    \item Use Bash and BATS to write and automate unit tests
+    \vspace{2pt}
+    \item Manage the project using Git and a collaborative approach with branching, merge requests, and clear versioning
+  \end{resume_list}
+  
+ %----------------------------%
+  % Volunteering %
+  %----------------------------%
+
+  \section{Social Involvement}
+
+  \headingBf{Volunteer Tutor}{2016--2017 \& 2022}
+  \headingIt{Pierrefonds Community Project}{Jan. 2022 -- June 2022}
+  \headingIt{St-Georges High School}{Oct. 2016 -- March 2017}
+  \begin{resume_list}
+    \item Assist students with their homework
+    \item Explain math and science concepts in simple terms
+  \end{resume_list}
+  
+  \headingBf{Préposé Bénévole aux Activités pour Patients}{Oct. 2016 -- Fév. 2017}
+\headingIt{Fondation de l'Hôpital Sainte-Anne}{}
+\begin{resume_list}
+    \item Accompany and assist patients in their routines and daily activities
+    \item Participate in organizing recreational activities, such as bingo games
+\end{resume_list}
+
+\end{document}

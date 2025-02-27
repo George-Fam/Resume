@@ -1,0 +1,186 @@
+%%%%
+% MTecknology's Resume
+%%%%
+% Author: George Fam
+% License: CC-BY-4
+% - https://creativecommons.org/licenses/by/4.0/legalcode.txt
+%%%%
+\documentclass[letterpaper,10pt]{article}
+\usepackage{mteck}
+\usepackage{fancyhdr}
+
+%===================%
+% George Fam's Resume %
+%===================%
+
+%\numberedPages % NOTE: lastpage requires a second build
+%\documentFooter{\tab \thepage \ / 2} % Does similar without using lastpage
+\begin{document}
+  %---------%
+  % Heading %
+  %---------%
+  \documentTitle{George Fam}{
+    % Web Version
+    %\raisebox{-0.05\height} \faPhone\ [redacted - web copy] ~
+    %\raisebox{-0.15\height} \faEnvelope\ [redacted - web copy] ~
+    %%
+    \href{tel:5146639709}{
+      \raisebox{-0.05\height} \faPhone\ 514-663-9709} ~ | ~
+    \href{mailto:george.fam@famcode.net}{
+      \raisebox{-0.15\height} \faEnvelope\ george.fam@famcode.net} ~ | ~
+    \href{https://www.linkedin.com/in/george-fam/}{
+      \raisebox{-0.15\height} \faLinkedin\ linkedin.com/in/george-fam}
+  }
+
+  %---------%
+  % Summary %
+  %---------%
+
+  \tinysection{Sommaire}
+  Étudiant en informatique et génie logiciel à l'UQAM, passionné par la conception de logiciels robustes et par les systèmes informatiques. En tant que technicien en pharmacie, j'ai développé des compétences essentielles en communication, en gestion de tâches multiples et en résolution de problèmes.
+
+  %--------%
+  % Skills %
+  %--------%
+
+  \section{Compétences}
+
+  \begin{multicols}{2}
+    \begin{itemize}[itemsep=-2px, parsep=5pt, leftmargin=75pt]
+      \item[\textbf{Langages}] Java, C, C++, Bash, HTML/CSS/JS
+      \item[\textbf{Outils}] Git, Maven, Jira, Docker, Podman, SQLite
+      \item[\textbf{Tests}] Jenkins, JUnit, BATS
+      \item[\textbf{OS}]  Windows, Linux (Arch, Debian, Ubuntu)
+      \item[\textbf{Méthodologies}]  Scrum, Kanban, Agile
+      \item[\textbf{Aptitudes}]  Communication, Travail d'équipe, Résolution de conflits, Écoute active, Service client
+      \item[\textbf{Pharmacie}]  RxPro, AssystRx,Ubiq, Empego, Magistrale, Commande de médicaments, Préparation des ordonnances
+      \item[\textbf{Langues}]  Français, Anglais, Arabe
+    \end{itemize}
+  \end{multicols}
+
+  %------------%
+  % Experience %
+  %------------%
+
+  \section{Expérience En Domaine}
+
+  \headingBf{Auxiliaire d'Enseignement}{Oct. 2024 -- Présent}
+  \headingIt{UQÀM | Université de Québec à Montréal}{}
+  \begin{resume_list}
+    \itemTitle{Démonstrateur de Laboratoire}
+    \item Démonstraire les labos des cours: INF1070(Util. et admin. des systèmes informatique) et INF2050(Outils et pratiques de dév logiciel) pour Hiver 2025
+    \begin{itemize}
+    \item{Fournir un encadrement pratique aux étudiants en expliquant les concepts et en répondant à leurs questions techniques}
+    \end{itemize}
+    \vspace{3pt}
+    \itemTitle{Correcteur}
+    \item Correction d'examens pour INF2050 pour Automne 2024
+    \begin{itemize}
+    \item{Assurer une correction rigoureuse et objective des examens en respectant les barèmes établis}
+    \end{itemize}
+    \itemTitle{Animation d'Ateliers}
+    \item Atelier d'Installation Linux
+    \begin{itemize}
+    \item{Accompagner l'installation et la configuration de Linux}
+    \end{itemize}
+  \end{resume_list}
+
+   \section{Expérience Hors-Domaine}
+
+  \headingBf{Assitant Technique en Pharmacie}{Sept. 2022 -- Présent}
+  \headingIt{BeLocum}{Août 2023 -- Présent}
+  \headingIt{Jean Coutu}{Sept. 2022 -- Présent}
+  \begin{resume_list}
+    \item Interpréter et saisir des ordonnances avec précision et efficacité à l'aide de RxPro, AssystRx et Ubiq
+  \end{resume_list}
+
+  \headingBf{Tuteur}{Oct. 2022 -- Juin 2023}
+  \headingIt{Projet Communautaire Pierrefonds}{}
+  \begin{resume_list}
+    \item Conçevoir et animer des séances de tutorat extrascolaires engageantes pour les étudiants
+    \item Aider les élèves à faire leurs devoirs et à se préparer aux examens
+    \item Coordonner des séances d'apprentissage en petits groupes et des jeux interactifs pour stimuler la motivation scolaire
+    \item Développer et mettre en œuvre des exercices supplémentaires pour améliorer la compréhension des élève
+    \item Corriger des exercices pour permettre aux étudiants de comprendre leurs erreurs et de s'améliorer
+  \end{resume_list}
+
+  \headingBf{Préposé Sénior}{Juil. 2018 -- Juil. 2020}
+  \headingIt{Couche-Tard}{}
+  \begin{resume_list}
+    \item Former les nouveaux membres de l'équipe sur le systèmes de point de vente et le service au client
+  \end{resume_list}
+
+  %-----------%
+  % Education %
+  %-----------%
+
+  \section{Éducation}
+
+  \headingBf{Baccalauréat, Informatique et Génie logiciel}{2023 -- En Cours} % Note: Adding year(s) exposes an implied age
+  \headingIt{UQÀM | Université de Québec à Montréal}{}
+  \vspace{10pt}
+  \headingBf{Double DEC, Science et Sciences Sociales}{2023} % Note: Adding year(s) exposes an implied age
+  \headingIt{CEGEP John Abbott}{}
+  \pagebreak
+
+    %----------------------------%
+  % Extracurricular Activities %
+  %----------------------------%
+
+  \section{Travaux Pratiques}
+
+  \headingBf{INF2120 (Programmation II)}{Java, JUnit}
+  \begin{resume_list}
+    \item Conception d’algorithmes à partir d’un interface
+    \vspace{2pt}
+    \item Développement d’un émulateur pour un robot virtuel
+    \vspace{2pt}
+    \item Développement de fonctionnalités pour un jeu de type Tower Defence
+    \vspace{2pt}
+    \item Conception et gestion de structures de données telles que des ensembles disjoints pour modéliser des intervalles triés
+    \vspace{2pt}
+    \item Réalisation de tests unitaires pour assurer la robustesse et la fiabilité des fonctionnalités implémentées
+    
+  \end{resume_list}
+
+  \headingBf{INF2050 (Outils et pratiques de développement logiciel)}{Java, JUnit, Maven}
+  \begin{resume_list}
+    \item Développement d’une application pour calculer la valeur foncière de terrains en fonction de données JSON d’entrée, avec génération de résultats JSON en sortie
+    \vspace{2pt}
+    \item Utilisation de Maven pour la gestion des dépendances, la compilation, et la production de JAR exécutables
+    \vspace{2pt}
+    \item Écriture et exécution de tests unitaires automatisés à l'aide de Maven et JUnit
+  \end{resume_list}
+  
+  \headingBf{INF3135 (Construction et maintenance de logiciels)}{C, Bash, BATS}
+  \begin{resume_list}
+    \item Développement du jeu vidéo Circles, inspiré de Super Hexagon, en utilisant la bibliothèque SDL2 pour la programmation graphique et l’animation
+    \vspace{2pt}
+    \item Utilisation de Bash et de BATS pour écrire et automatiser des tests unitaires
+    \vspace{2pt}
+    \item Gestion de projet en utilisant Git et une approche collaborative via des branches, avec des merge requests et un versionnement clair
+  \end{resume_list}
+  
+ %----------------------------%
+  % Volunteering %
+  %----------------------------%
+
+  \section{Implication Sociale}
+
+  \headingBf{Tuteur (bénévole)}{2016--2017 \& 2022}
+  \headingIt{Projet Communautaire Pierrefonds}{Janv. 2022 -- Juin 2022}
+  \headingIt{École Secondaire St-Georges}{Oct. 2016 -- Mars 2017}
+  \begin{resume_list}
+    \item Aider les élèves avec leurs devoirs
+    \item Vulgariser des concepts de mathématiques et de science
+  \end{resume_list}
+  
+  \headingBf{Préposé Bénévole aux Activités pour Patients}{Oct. 2016 -- Fév. 2017}
+\headingIt{Fondation de l'Hôpital Sainte-Anne}{}
+\begin{resume_list}
+    \item Accompagner et assister les patients dans leurs routines et activités quotidiennes
+    \item Participer à l'organisation d'activités récréatives, telles que des parties de Bingo
+\end{resume_list}
+
+
+\end{document}
