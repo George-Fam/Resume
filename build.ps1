@@ -29,7 +29,7 @@ if ($existingPdfs) {
 Clean-AuxFiles -directory $buildDir
 
 # Compile 
-gci *.tex | foreach {
+gci *.tex | Where-Object { $_.Name -match '^(english|french).*\.tex$' } | foreach {
 	pdflatex -output-format=pdf -output-directory=build $_.Name  | Out-Null
 	Write-Host "Done: $_.Name"
 }
