@@ -85,7 +85,7 @@
 
 %%% Company Details Macro %%%
 
-\newcommand{\companyInfo}[4]{
+\newcommand{\companyInfo}[1]{
     \begin{flushright}
         \parbox{4\spacebox}{
             \raggedleft
@@ -94,11 +94,6 @@
             \xvspace
             \textbf{#1}\par
             \mvspace
-            \color{grayShy} \textsc{\MakeLowercase{#2}}\par
-            \xvspace
-            \textsc{\MakeLowercase{#3}}\par
-            \xvspace
-            \textsc{\MakeLowercase{#4}}\par 
             \color{black}
         }
     \end{flushright} 
@@ -121,6 +116,8 @@
           #1\par
           \svspace
           #2
+          \par
+          \svspace
         }\par
     \end{flushleft}
 }
@@ -130,7 +127,7 @@
 \newcommand{\signature}{
     \svspace
     \parbox{3\spacebox}{
-      Sincerly,\par
+      Cordialement,\par
       \svspace \hspace{-0.3em}
       \textbf{\color{\mainColor} \MakeUppercase{\lastname} \color{black} \firstname}\par
       \svspace \svspace
@@ -140,16 +137,4 @@
 
 %%%%%%%%%%%% Your cover letter below %%%%%%%%%%%%
 
-\begin{document}
-\fontfamily{phv}\selectfont
-\userInfo{Montréal, Québec}{(514) 663-9709}{george.fam@famcode.net}
-\companyInfo{COMPANY NAME}{CONTACT NAME/TITLE}{ADDR}{CITY/STATE}
-\object{SUBJECT}
-\content{
-  Dear CONTACT, \\
-  
-  \lipsum[1-1] \\
-}{I look forward to discuss the position and what I can do for your company.}
-\signature
-\includegraphics[height=3\baselineskip]{signature} \par
-\end{document}
+
