@@ -41,8 +41,8 @@ foreach ($file in $texFiles) {
     Write-Progress -Activity "Compiling PDFs" `
                    -Status "Processing $($file.Name) ($index of $total)" `
                    -PercentComplete ($index / $total * 100)
-    pdflatex -output-format=pdf -output-directory=build $file.FullName.Replace('\','/') | Out-Null
-    Write-Host "Done: $($file.Name)"
+    # Non stop mode to prevent pdflatex from hanging on error
+    pdflatex -interaction=nonstopmode -output-format=pdf -output-directory=build $file.FullName.Replace('\','/') | Out-Null
 }
 
 # Clean aux files AFTER compilation
