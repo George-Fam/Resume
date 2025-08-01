@@ -1,5 +1,5 @@
 param (
-    [Parameter(Mandatory = $true, ValueFromRemainingArguments = $true)]
+    [string[]]$Targets=@()
     [string[]]$Targets
 )
 
@@ -12,6 +12,12 @@ if (-not (Test-Path $OutputDir)) {
     New-Item -ItemType Directory -Path $OutputDir | Out-Null
 }
 
+# Default Targets (ALL)
+if ($Targets.Count -eq 0){
+    $Targets = gci -Path $ContentDir -Filter *.tex | % { $_.BaseName }
+}
+
+
 foreach ($Target in $Targets) {
     $TexBase = "cover$Target"
     $OutputTex = "$TexBase.tex"
@@ -23,7 +29,7 @@ foreach ($Target in $Targets) {
 
         # Compile the LaTeX file
         pdflatex -interaction=nonstopmode $OutputTex | Out-Null
-       
+        
         # Clean aux files
         $AuxFiles = @("$TexBase.aux", "$TexBase.log", "$TexBase.out", $OutputTex)
         Remove-Item $AuxFiles -ErrorAction SilentlyContinue
