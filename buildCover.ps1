@@ -17,8 +17,15 @@ if ($Targets.Count -eq 0){
     $Targets = gci -Path $ContentDir -Filter *.tex | % { $_.BaseName }
 }
 
+# Progress Vars
+$total = $Targets.Count
+$index = -1
 
 foreach ($Target in $Targets) {
+    #Progress
+    $index++
+    Write-Progress -Activity "Building Covers" -Status "Processing $Target ($index of $total)" -PercentComplete ($index/$total*100)
+
     $TexBase = "cover$Target"
     $OutputTex = "$TexBase.tex"
     $ContentFile = "$ContentDir\$Target.tex"

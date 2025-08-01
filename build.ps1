@@ -28,10 +28,21 @@ if ($existingPdfs) {
 # Clean aux files BEFORE compilation
 Clean-AuxFiles -directory $buildDir
 
+# Get files
+$texFiles = gci inputs -Filter *.tex | Where-Object { $_.Name -match '^(english|french).*\.tex$' } 
+
+# Progress vars
+$total = $texFiles.Count
+$index = -1
+
 # Compile 
-gci inputs -Filter *.tex | Where-Object { $_.Name -match '^(english|french).*\.tex$' } | foreach {
-	pdflatex -output-format=pdf -output-directory=build $_.FullName.Replace('\','/') #| Out-Null
-	Write-Host "Done: $_.Name"
+foreach ($file in $texFiles) {
+    $index++
+    Write-Progress -Activity "Compiling PDFs" `
+                   -Status "Processing $($file.Name) ($index of $total)" `
+                   -PercentComplete ($index / $total * 100)
+    pdflatex -output-format=pdf -output-directory=build $file.FullName.Replace('\','/') | Out-Null
+    Write-Host "Done: $($file.Name)"
 }
 
 # Clean aux files AFTER compilation
