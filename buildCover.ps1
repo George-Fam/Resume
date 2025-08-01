@@ -1,6 +1,5 @@
 param (
     [string[]]$Targets=@()
-    [string[]]$Targets
 )
 
 $Template = "coverTemplate.tex"
