@@ -42,6 +42,12 @@ foreach ($Target in $Targets) {
 
         # Move PDF to covers
         Move-Item "cover$Target.pdf" -Destination $OutputDir -Force
+
+        if ($LASTEXITCODE -eq 0) {
+            Write-Host "Done: $ContentFile"
+        } else {
+            Write-Host "Failure: $ContentFile" -ForegroundColor Red
+        }
     } else {
         Write-Warning "Content file '$ContentFile' not found. Skipping."
     }

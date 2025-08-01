@@ -43,6 +43,12 @@ foreach ($file in $texFiles) {
                    -PercentComplete ($index / $total * 100)
     # Non stop mode to prevent pdflatex from hanging on error
     pdflatex -interaction=nonstopmode -output-format=pdf -output-directory=build $file.FullName.Replace('\','/') | Out-Null
+
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "Done: $($file.Name)"
+    } else {
+        Write-Host "Failure: $($file.Name)" -ForegroundColor Red
+    }
 }
 
 # Clean aux files AFTER compilation
