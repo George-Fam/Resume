@@ -29,8 +29,8 @@ if ($existingPdfs) {
 Clean-AuxFiles -directory $buildDir
 
 # Compile 
-gci *.tex | Where-Object { $_.Name -match '^(english|french).*\.tex$' } | foreach {
-	pdflatex -output-format=pdf -output-directory=build $_.Name  | Out-Null
+gci inputs -Filter *.tex | Where-Object { $_.Name -match '^(english|french).*\.tex$' } | foreach {
+	pdflatex -output-format=pdf -output-directory=build $_.FullName.Replace('\','/') #| Out-Null
 	Write-Host "Done: $_.Name"
 }
 
