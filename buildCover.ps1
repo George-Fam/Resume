@@ -5,7 +5,7 @@ param (
 
 $Template = "coverTemplate.tex"
 $ContentDir = "inputs/covers"
-$OutputDir = "covers"
+$OutputDir = "build/covers"
 
 # Ensure build folder exists
 if (-not (Test-Path $OutputDir)) {
