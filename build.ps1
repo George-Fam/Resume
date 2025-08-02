@@ -38,6 +38,11 @@ Clean-Files -directory $buildDir -Extensions $AUX_EXTENSIONS
 # Get files
 $texFiles = gci $inputsDir -Filter *.tex | Where-Object { $_.Name -match '^(english|french).*\.tex$' } 
 
+# Handle no .tex files
+if ($texFiles.Count -eq 0) {
+    Write-Warning "No matching .tex files found in '$inputsDir'. Expected filenames like 'english*.tex' or 'french*.tex'. Exiting."
+    exit 1
+}
 # Progress vars
 $total = $texFiles.Count
 $index = -1
