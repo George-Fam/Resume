@@ -2,6 +2,8 @@
 $AUX_EXTENSIONS = @("*.aux", "*.log", "*.out")
 $PDF_EXTENSIONS = @("*.pdf")
 
+$buildDir = Join-Path -Path $PSScriptRoot -ChildPath "build"
+$inputsDir = Join-Path -Path $PSScriptRoot -ChildPath "inputs"
 
 # Cleanup files (aux and old PDFs)
 function Clean-Files {
@@ -23,7 +25,6 @@ function Clean-Files {
     }
 }
 
-$buildDir = "build"
 if (-not (Test-Path $buildDir)) {
     New-Item -ItemType Directory -Path $buildDir | Out-Null
 }
@@ -35,7 +36,7 @@ Clean-Files -directory $buildDir -Extensions $PDF_EXTENSIONS
 Clean-Files -directory $buildDir -Extensions $AUX_EXTENSIONS
 
 # Get files
-$texFiles = gci inputs -Filter *.tex | Where-Object { $_.Name -match '^(english|french).*\.tex$' } 
+$texFiles = gci $inputsDir -Filter *.tex | Where-Object { $_.Name -match '^(english|french).*\.tex$' } 
 
 # Progress vars
 $total = $texFiles.Count
