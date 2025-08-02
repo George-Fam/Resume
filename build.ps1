@@ -1,16 +1,18 @@
+param (
+    [string]$BuildDir = "build",
+    [string]$InputsDir = "inputs",
+    [string[]]$Targets
+)
+
 # Extension sets
 $AUX_EXTENSIONS = @("*.aux", "*.log", "*.out")
 $PDF_EXTENSIONS = @("*.pdf")
-
-$buildDir = Join-Path -Path $PSScriptRoot -ChildPath "build"
-$inputsDir = Join-Path -Path $PSScriptRoot -ChildPath "inputs"
 
 # Cleanup files (aux and old PDFs)
 function Clean-Files {
     param (
         [Parameter(Mandatory=$true)]
         [string]$Directory,
-
         [string[]]$Extensions
     )
 
@@ -35,8 +37,14 @@ Clean-Files -directory $buildDir -Extensions $PDF_EXTENSIONS
 # Clean aux files BEFORE compilation
 Clean-Files -directory $buildDir -Extensions $AUX_EXTENSIONS
 
-# Get files
-$texFiles = gci $inputsDir -Filter *.tex | Where-Object { $_.Name -match '^(english|french).*\.tex$' } 
+# Get files (Use pattern if no target)
+$texFiles = gci $InputsDir -Filter *.tex | Where-Object {
+    if ($Targets) {
+        $Targets -contains $_.Name
+    } else {
+        $_.Name -match '^(english|french).*\.tex$'
+    }
+}
 
 # Handle no .tex files
 if ($texFiles.Count -eq 0) {
