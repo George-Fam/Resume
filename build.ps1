@@ -1,7 +1,8 @@
 param (
     [string]$BuildDir = "build",
     [string]$InputsDir = "inputs",
-    [string[]]$Targets
+    [string[]]$Targets,
+    [switch]$Debug
 )
 
 # Extension sets
@@ -61,8 +62,13 @@ foreach ($file in $texFiles) {
     Write-Progress -Activity "Compiling PDFs" `
                    -Status "Processing $($file.Name) ($index of $total)" `
                    -PercentComplete ($index / $total * 100)
+
     # Non stop mode to prevent pdflatex from hanging on error
-    pdflatex -interaction=nonstopmode -output-format=pdf -output-directory=build $file.FullName.Replace('\','/') | Out-Null
+    if ($Debug) {
+        pdflatex -interaction=nonstopmode -output-format=pdf -output-directory="$BuildDir" $($file.FullName.Replace('\','/'))
+    } else {
+        pdflatex -interaction=nonstopmode -output-format=pdf -output-directory="$BuildDir" $($file.FullName.Replace('\','/')) | Out-Null
+    }
 
     if ($LASTEXITCODE -eq 0) {
         Write-Host "Done: $($file.Name)"
