@@ -1,15 +1,25 @@
-# Cleanup aux files
-function Clean-AuxFiles {
+# Extension sets
+$AUX_EXTENSIONS = @("*.aux", "*.log", "*.out")
+$PDF_EXTENSIONS = @("*.pdf")
+
+
+# Cleanup files (aux and old PDFs)
+function Clean-Files {
     param (
-        [string]$directory
+        [Parameter(Mandatory=$true)]
+        [string]$Directory,
+
+        [string[]]$Extensions
     )
 
-    if (Test-Path $directory) {
-        $auxFiles = Get-ChildItem "$directory\*" -Include *.aux, *.log, *.out -ErrorAction SilentlyContinue
-        if ($auxFiles) {
-            Write-Host "Removing auxiliary files in $directory..."
-            $auxFiles | Remove-Item -Force
+    if (Test-Path $Directory) {
+        $files = Get-ChildItem -Path $Directory -Include $Extensions -File -ErrorAction SilentlyContinue
+        if ($files) {
+            Write-Host "Removing files ($($Extensions -join ', ')) in '$Directory'..."
+            $files | Remove-Item -Force
         }
+    } else {
+        Write-Warning "Directory '$Directory' does not exist."
     }
 }
 
@@ -19,14 +29,10 @@ if (-not (Test-Path $buildDir)) {
 }
 
 # Delete existing PDFs
-$existingPdfs = Get-ChildItem "$buildDir\*.pdf"
-if ($existingPdfs) {
-    Write-Host "Removing old PDFs..."
-    $existingPdfs | Remove-Item
-}
+Clean-Files -directory $buildDir -Extensions $PDF_EXTENSIONS
 
 # Clean aux files BEFORE compilation
-Clean-AuxFiles -directory $buildDir
+Clean-Files -directory $buildDir -Extensions $AUX_EXTENSIONS
 
 # Get files
 $texFiles = gci inputs -Filter *.tex | Where-Object { $_.Name -match '^(english|french).*\.tex$' } 
@@ -52,4 +58,4 @@ foreach ($file in $texFiles) {
 }
 
 # Clean aux files AFTER compilation
-Clean-AuxFiles -directory $buildDir
+Clean-Files -directory $buildDir -Extensions $AUX_EXTENSIONS
