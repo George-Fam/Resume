@@ -18,7 +18,7 @@ function Clean-Files {
     )
 
     if (Test-Path $Directory) {
-        $files = Get-ChildItem -Path $Directory -Include $Extensions -File -ErrorAction SilentlyContinue
+        $files = Get-ChildItem -Path $Directory/* -Include $Extensions -File -ErrorAction SilentlyContinue
         if ($files) {
             Write-Host "Removing files ($($Extensions -join ', ')) in '$Directory'..."
             $files | Remove-Item -Force
