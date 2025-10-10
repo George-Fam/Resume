@@ -1,4 +1,5 @@
 build/
+inputs/covers/
 *.pdf
 *.aux
 *.log
