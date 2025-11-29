@@ -11,21 +11,31 @@ I use this system to manage my own resume and cover letters. The repository incl
 ## Usage
 ### Build All CVs
 ```powershell
-./scripts/build.ps1
+./build.ps1
+```
+
+### Build Specific CVs
+```powershell
+./build.ps1 -Targets english.tex,french.tex
+```
+
+### Debug Mode (shows pdflatex output)
+```powershell
+./build.ps1 -Debug
 ```
 
 ### Build All Cover Letters
 ```powershell
-./scripts/buildCovers.ps1
+./buildCovers.ps1
 ```
 
 ### Build Specific Covers
 ```powershell
-./scripts/buildCovers.ps1 Company1 Company2
+./buildCovers.ps1 Company1 Company2
 ```
 
 ### Signature Embedding
-To embed a digital signature image at the bottom of each document:
+To embed a digital signature image at the bottom of each cover letter:
 
 - Place your signature image in `inputs/signature.png`
 - The script inserts `\includegraphics` into the final LaTeX before compilation
