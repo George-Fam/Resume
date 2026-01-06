@@ -25,7 +25,7 @@ jobs:
       - name: Install LaTeX Packages
         run: |
           tlmgr update --self
-          tlmgr install collection-fontsrecommended collection-latexrecommended collection-fontsextra fontawesome5
+          tlmgr install preprint titlesec enumitem fancyhdr fontawesome5 tools lastpage cormorantgaramond charter xcolor hyperref bookmark fontaxes
           tlmgr list --only-installed
         shell: powershell
 
