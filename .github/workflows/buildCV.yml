@@ -32,7 +32,7 @@ jobs:
         # ---- Build Resumes ----
       - name: Generate Resumes
         run: |
-          ./build.ps1
+          ./build.ps1 -Debug
         shell: powershell
 
         # ---- Release (uses tag that triggered the workflow) ----
