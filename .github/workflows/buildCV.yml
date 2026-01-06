@@ -1,0 +1,55 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6.0.1
+        with:
+          fetch-depth: 0
+
+        # ---- Dependencies -----
+      - name: Setup TinyTeX
+        uses: r-lib/actions/setup-tinytex@v2
+
+      - name: Install LaTeX Packages
+        run: |
+          tlmgr update --self
+          tlmgr install collection-fontsrecommended collection-latexrecommended collection-fontsextra fontawesome5
+          tlmgr list --only-installed
+        shell: powershell
+
+        # ---- Build Resumes ----
+      - name: Generate Resumes
+        run: |
+          ./build.ps1
+        shell: powershell
+
+        # ---- Release (uses tag that triggered the workflow) ----
+      - name: Create GitHub Release and Upload PDFs
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Resume Release ${{ github.ref_name }}
+          body: |
+            Automated resume build from tag **${{ github.ref_name }}**
+            
+            Commit: ${{ github.sha }}
+            
+            ## Generated Artifacts
+            - Resume PDFs (LaTeX)
+          files: |
+            build/*.pdf
+          make_latest: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
