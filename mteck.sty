@@ -81,20 +81,6 @@
   \end{center}
 }
 
-% Create a footer with correct padding
-% Usage: \documentFooter{\thepage of X}
-\newcommand{\documentFooter}[1]{
-  \setlength{\footskip}{10.25pt}
-  \fancyfoot[C]{\footnotesize #1}
-}
-
-% Simple wrapper to set up page numbering
-% Usage: \numberedPages
-% WARNING: Must run pdflatex twice!
-\newcommand{\numberedPages}{
-  \documentFooter{\thepage/\pageref{LastPage}}
-}
-
 % Section heading with horizontal rule
 % Usage: \section{Title}
 \titleformat{\section}{
