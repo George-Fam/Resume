@@ -43,13 +43,13 @@ $texFiles = gci $InputsDir -Filter *.tex | Where-Object {
     if ($Targets) {
         $Targets -contains $_.Name
     } else {
-        $_.Name -match '^(english|french).*\.tex$'
+        $_.Name -match '^.*\.tex$'
     }
 }
 
 # Handle no .tex files
 if ($texFiles.Count -eq 0) {
-    Write-Warning "No matching .tex files found in '$inputsDir'. Expected filenames like 'english*.tex' or 'french*.tex'. Exiting."
+    Write-Warning "No matching .tex files found in '$inputsDir'. Expected filenames like '*.tex'. Exiting."
     exit 1
 }
 # Progress vars
