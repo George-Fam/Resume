@@ -25,14 +25,14 @@ jobs:
       - name: Install LaTeX Packages
         run: |
           tlmgr update --self
-          tlmgr install collection-fontsrecommended collection-latexrecommended collection-fontsextra fontawesome5
+          tlmgr install preprint titlesec enumitem fancyhdr fontawesome5 tools lastpage cormorantgaramond charter xcolor hyperref bookmark fontaxes
           tlmgr list --only-installed
         shell: powershell
 
         # ---- Build Resumes ----
       - name: Generate Resumes
         run: |
-          ./build.ps1
+          ./build.ps1 -Debug
         shell: powershell
 
         # ---- Release (uses tag that triggered the workflow) ----
