@@ -25,9 +25,10 @@ foreach ($Target in $Targets) {
     $index++
     Write-Progress -Activity "Building Covers" -Status "Processing $Target ($index of $total)" -PercentComplete ($index/$total*100)
 
-    $TexBase = "cover$Target"
-    $OutputTex = "$TexBase.tex"
-    $ContentFile = "$ContentDir\$Target.tex"
+    $TexBase = "$Target"
+    $InputTex = "$TexBase.tex"
+    $OutputTex = "cover$InputTex"
+    $ContentFile = Join-Path $ContentDir $InputTex
 
     if (Test-Path $ContentFile) {
         # Concatenate template and content into one .tex file
@@ -37,7 +38,7 @@ foreach ($Target in $Targets) {
         pdflatex -interaction=nonstopmode $OutputTex | Out-Null
         
         # Clean aux files
-        $AuxFiles = @("$TexBase.aux", "$TexBase.log", "$TexBase.out", $OutputTex)
+        $AuxFiles = @("cover$TexBase.aux", "cover$TexBase.log", "cover$TexBase.out", $OutputTex)
         Remove-Item $AuxFiles -ErrorAction SilentlyContinue
 
         # Move PDF to covers
