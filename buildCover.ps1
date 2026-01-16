@@ -1,5 +1,5 @@
 param (
-    [string[]]$Targets=@()
+    [string[]]$Targets = @()
 )
 
 $Template = "coverTemplate.tex"
@@ -12,7 +12,7 @@ if (-not (Test-Path $OutputDir)) {
 }
 
 # Default Targets (ALL)
-if ($Targets.Count -eq 0){
+if ($Targets.Count -eq 0) {
     $Targets = gci -Path $ContentDir -Filter *.tex | % { $_.BaseName }
 }
 
@@ -23,7 +23,7 @@ $index = -1
 foreach ($Target in $Targets) {
     #Progress
     $index++
-    Write-Progress -Activity "Building Covers" -Status "Processing $Target ($index of $total)" -PercentComplete ($index/$total*100)
+    Write-Progress -Activity "Building Covers" -Status "Processing $Target ($index of $total)" -PercentComplete ($index / $total * 100)
 
     $TexBase = "$Target"
     $InputTex = "$TexBase.tex"

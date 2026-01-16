@@ -12,7 +12,7 @@ $PDF_EXTENSIONS = @("*.pdf")
 # Cleanup files (aux and old PDFs)
 function Clean-Files {
     param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [string]$Directory,
         [string[]]$Extensions
     )
@@ -60,14 +60,14 @@ $index = -1
 foreach ($file in $texFiles) {
     $index++
     Write-Progress -Activity "Compiling PDFs" `
-                   -Status "Processing $($file.Name) ($index of $total)" `
-                   -PercentComplete ($index / $total * 100)
+        -Status "Processing $($file.Name) ($index of $total)" `
+        -PercentComplete ($index / $total * 100)
 
     # Non stop mode to prevent pdflatex from hanging on error
     if ($Debug) {
-        pdflatex -interaction=nonstopmode -output-format=pdf -output-directory="$BuildDir" $($file.FullName.Replace('\','/'))
+        pdflatex -interaction=nonstopmode -output-format=pdf -output-directory="$BuildDir" $($file.FullName.Replace('\', '/'))
     } else {
-        pdflatex -interaction=nonstopmode -output-format=pdf -output-directory="$BuildDir" $($file.FullName.Replace('\','/')) | Out-Null
+        pdflatex -interaction=nonstopmode -output-format=pdf -output-directory="$BuildDir" $($file.FullName.Replace('\', '/')) | Out-Null
     }
 
     if ($LASTEXITCODE -eq 0) {
