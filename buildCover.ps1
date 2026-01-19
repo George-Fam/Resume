@@ -1,10 +1,10 @@
 param (
-    [string[]]$Targets = @()
+    [string[]]$Targets = @(),
+    [string]$ContentDir = "inputs/covers",
+    [string]$OutputDir = "build/covers"
 )
 
 $Template = "coverTemplate.tex"
-$ContentDir = "inputs/covers"
-$OutputDir = "build/covers"
 
 # Ensure build folder exists
 if (-not (Test-Path $OutputDir)) {
