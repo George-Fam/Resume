@@ -34,7 +34,7 @@
 \definecolor{redBlood}{RGB}{188, 20, 20}
 \definecolor{grayShy}{RGB}{153, 150, 142}
 
-\newcommand{\mainColor}{MidnightBlue} % pick a color above, or add a custom one
+\newcommand{\mainColor}{MidnightBlue}
 
 %%%%%%%%%%%%% Spaces %%%%%%%%%%%%%
 
@@ -85,12 +85,13 @@
 
 %%% Company Details Macro %%%
 
-\newcommand{\companyInfo}[1]{
+\newcommand{\companyInfo}[2]{
     \begin{flushright}
         \parbox{4\spacebox}{
             \raggedleft
             \small
             \textbf{#1}\par
+			\color{grayShy} \textsc{\MakeLowercase{#2}}\par
             \mvspace
             \color{black}
         }
