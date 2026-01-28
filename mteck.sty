@@ -1,19 +1,14 @@
-%%%%%%%%%%%%%%%%%%%%%%%
-%% BEGIN_FILE: mteck.sty
-%% NOTE: Everything between here and END_FILE can
-%% be relocated to "mteck.sty" and then included with:
-%\usepackage{mteck}
-
 % Dependencies
-% NOTE: Some packages (lastpage, hyperref) require second build!
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{enumitem}
+
 % Font encoding & input encoding
 % Required for correct Unicode mapping in pdfLaTeX.
 % Fixes accent copy/paste issues (é, à, ç, ü) in ATS and text extraction.
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+
 %\usepackage[hidelinks]{hyperref}
 
 \usepackage{fancyhdr}
@@ -42,7 +37,6 @@
 \usepackage{bookmark}
 
 % Misc. Options
-
 \pagestyle{plain}
 
 \renewcommand{\headrulewidth}{0pt}
@@ -136,6 +130,3 @@
 
 % Bullets used in itemized lists
 \renewcommand\labelitemi{--}
-
-%% END_FILE: mteck.sty
-%%%%%%%%%%%%%%%%%%%%%%
