@@ -1,19 +1,23 @@
 param (
     [string[]]$Targets = @(),
     [string]$ContentDir = "inputs/covers",
-    [string]$OutputDir = "build/covers"
+    [string]$BuildDir = "build/covers",
+    [switch]$Debug
 )
 
 $Template = "coverTemplate.tex"
+$AuxDir = Join-Path $BuildDir "aux"
 
-# Ensure build folder exists
-if (-not (Test-Path $OutputDir)) {
-    New-Item -ItemType Directory -Path $OutputDir | Out-Null
+# Ensure directories exist
+$BuildDir, $AuxDir | ForEach-Object {
+    if (-not (Test-Path $_)) {
+        New-Item -ItemType Directory -Path $_ | Out-Null
+    }
 }
 
 # Default Targets (ALL)
 if ($Targets.Count -eq 0) {
-    $Targets = gci -Path $ContentDir -Filter *.tex | % { $_.BaseName }
+    $Targets = gci $ContentDir -Filter *.tex | % { $_.BaseName }
 }
 
 # Progress Vars
@@ -24,25 +28,18 @@ foreach ($Target in $Targets) {
     #Progress
     $index++
     Write-Progress -Activity "Building Covers" -Status "Processing $Target ($index of $total)" -PercentComplete ($index / $total * 100)
-
-    $TexBase = "$Target"
-    $InputTex = "$TexBase.tex"
-    $OutputTex = "cover$InputTex"
-    $ContentFile = Join-Path $ContentDir $InputTex
+    
+    $ContentFile = Join-Path $ContentDir "$Target.tex"
+    $CombinedTex = Join-Path $AuxDir "cover$Target.tex"
 
     if (Test-Path $ContentFile) {
-        # Concatenate template and content into one .tex file
-        Get-Content $Template, $ContentFile | Set-Content $OutputTex -Encoding UTF8
+        Get-Content $Template, $ContentFile | Set-Content $CombinedTex -Encoding UTF8
 
-        # Compile the LaTeX file
-        pdflatex -interaction=nonstopmode $OutputTex | Out-Null
-        
-        # Clean aux files
-        $AuxFiles = @("cover$TexBase.aux", "cover$TexBase.log", "cover$TexBase.out", $OutputTex)
-        Remove-Item $AuxFiles -ErrorAction SilentlyContinue
-
-        # Move PDF to covers
-        Move-Item "cover$Target.pdf" -Destination $OutputDir -Force
+        if ($Debug) {
+            latexmk -pdf -interaction=nonstopmode -outdir="$BuildDir" -auxdir="$AuxDir" $CombinedTex
+        } else {
+            latexmk -pdf -interaction=nonstopmode -outdir="$BuildDir" -auxdir="$AuxDir" $CombinedTex | Out-Null
+        }
 
         if ($LASTEXITCODE -eq 0) {
             Write-Host "Done: $ContentFile"
