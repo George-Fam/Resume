@@ -6,7 +6,7 @@ param (
 )
 
 $Template = "coverTemplate.tex"
-$AuxDir = Join-Path $BuildDir "aux"
+$AuxDir = Join-Path $BuildDir "auxDirectory"
 
 # Ensure directories exist
 $BuildDir, $AuxDir | ForEach-Object {

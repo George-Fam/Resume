@@ -5,7 +5,7 @@ param (
     [switch]$Debug
 )
 
-$AuxDir = Join-Path $BuildDir "aux"
+$AuxDir = Join-Path $BuildDir "auxDirectory"
 
 if (-not (Test-Path $buildDir)) {
     New-Item -ItemType Directory -Path $buildDir | Out-Null
