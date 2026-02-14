@@ -1,12 +1,54 @@
 # LaTeX CV & Cover Letter Automation
 
-This project automates the generation of multilingual CVs and cover letters written in LaTeX using PowerShell scripts. It supports batch compilation, selective document builds and digital signature embedding.
+## Summary
+A reproducible document generation pipeline built with **PowerShell, Python, LaTeX, and GitHub Actions** to automate multilingual CV and cover letter production. This system eliminates tedious manual formatting by generating, compiling, validating, and versioning tailored LaTeX documents from structured inputs.
 
-I use this system to manage my own resume and cover letters. The repository includes both **English** and **French** versions of my CV, tracked and versioned to reflect updates over time.
+It also supports batch compilation, selective document builds and digital signature embedding.
+
+P.S. I use this system to manage my own resume and cover letters. The repository includes my CV, tracked and versioned to reflect updates over time.
+
+## Architecture
+The project consists of:
+
+- **PowerShell build scripts** for controlled LaTeX compilation
+- **Python + OpenAI API integration** for automated cover letter generation
+- **CI/CD pipelines (GitHub Actions)** for automated builds and artifact validation
+- **Template-based LaTeX structure** with strict formatting validation
+- **Batch and targeted build support**
+- **Digital signature embedding**
+
+## Core Features
+
+### Automated CV Compilation
+- Batch compilation of multiple `.tex` CV variants
+- Selective target builds
+- Debug mode for compilation tracing
+- Output + auxiliary directory separation
+- Non-blocking LaTeX error handling
+
+### AI-Generated Cover Letters
+- Uses OpenAI API to generate tailored LaTeX cover letters
+- Injects CV + job posting + system prompt
+- Validates LaTeX output before writing
+- Automatically backs up previous versions
+- Enforces compile-safe LaTeX formatting
+
+### CI/CD Integration
+- GitHub Actions pipeline for:
+  - Automated builds
+  - Artifact versioning
+  - Reproducible PDF generation
+- Ensures consistent output across environments
+
+### Digital Signature Injection
+- Automatically embeds signature image into generated cover letters
+- Centralized asset management
 
 ## Requirements
 - PowerShell 7+
-- TeX Live or MikTeX or other including pdflatex
+- Python 3.10+
+- OpenAI API Key
+- TeX Live / MikTeX
 
 ## Usage
 ### Build All CVs
