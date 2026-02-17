@@ -22,7 +22,7 @@
 %----------%
 \hypersetup{
   pdfinfo={
-    Title={George Fam -- Software Engineering Resume},
+    Title={George Fam -- Software Engineering Intern Resume},
     Author={George Fam},
     Subject={Computer Science and Software Engineering Internship Resume},
     Keywords={Java, C++,TypeScript, JavaScript, Spring Boot, Angular, Docker, SQL, Linux, Backend, Full-Stack, Software Engineering}
@@ -43,29 +43,70 @@
     \raisebox{-0.15\height} \faGithubSquare\ github.com/George-Fam}
 }
 
-%---------%
-% Summary %
-%---------%
-
-\tinysection{Summary}
-Software engineering student with a strong interest in backend development, cloud-based systems, and full-stack engineering. I enjoy building reliable applications using Java, Spring Boot, Angular, Docker and Linux, and I’ve deployed complete systems on GCP as part of academic and hackathon projects. Solid foundation in algorithms, data structures, and object-oriented programming, with additional experience in C/C++ and scripting on Windows \& Linux. 
-\newline
-
-%---------%
-% Achievements %
-%---------%
-
-\tinysection{Achievements}
-\textbf{2\textsuperscript{nd} Place - Morgan Stanley Code to Give Hackathon (2025)}   Built \emph{Donate With Athena}, a full-stack donation and engagement platform for the nonprofit Shield of Athena during a 5-day hackathon. Delivered backend, frontend, deployment, and AI-integrated features under tight timelines. 
-
 %-----------%
 % Education %
 %-----------%
 
 \section{Education}
 
-\headingBf{Bachelor's Degree, Computer Science and Software Engineering}{2023 -- Present}
-\headingIt{UQÀM | Université du Québec à Montréal}{}
+\headingBf{B.Sc. Computer Science \& Software Engineering, UQAM}{Sept. 2023 -- May 2027 (Expected)}
+
+%----------------------------%
+% Extracurricular Activities %
+%----------------------------%
+
+\section{Projects}
+
+\headingBf{Donate With Athena {\small \href{https://github.com/Morgan-Stanley-CtG-Team-3/CodeToGiveTeam3Montreal}{\faGithubSquare\ Donate With Athena}}}{}
+\begin{resume_list}
+\item Collaborated in a 5-person team to design and build a full-stack gamified donation platform using Java, TypeScript, Spring Boot, Angular, MySQL, and REST APIs.
+\item Built the platform for the nonprofit, Shield of Athena, during Morgan Stanley’s Code to Give Hackathon, earning 2\textsuperscript{nd} place among competing teams.
+\item Deployed using Google Cloud Platform (GCP), Docker, and Nginx to containerize backend services and configure SSL-secured reverse proxy infrastructure.
+\item Integrated n8n, Tidio APIs, and automation workflows to enable chatbot support, voice automation, and scheduled social media outreach.
+\end{resume_list}
+
+\headingBf{LaTeX CV \& Cover Letter Automation {\small\href{https://github.com/George-Fam/Resume}{\faGithubSquare\ George-Fam/Resume}}}{}
+\begin{resume_list}
+\item Engineered a PowerShell \& Python automation pipeline to generate and compile multi-version LaTeX CVs and AI-tailored cover letters.
+\item Integrated OpenAI API, GitHub Actions(CI/CD) workflows to automate document generation, validation, artifact versioning, and reproducible PDF builds.
+\end{resume_list}
+
+\headingBf{AVL Tree Implementation {\small \href{https://github.com/George-Fam/AVLTree}{\faGithubSquare\ George-Fam/AVLTree}}}{}
+\begin{resume_list}
+\item Used C++ to implement an AVL tree with set operations and developed structured tests to validate correctness and performance; ranked \#1 in class evaluation.
+\end{resume_list}
+
+\headingBf{Land Value Analyzer {\small \href{https://github.com/George-Fam/land-value-analyzer}{\faGithubSquare\ George-Fam/land-value-analyzer}}}{}
+\begin{resume_list}
+\item Used Java, JSON-lib and object-oriented design to build a rule-based land value calculator with JSON I/O.
+\item Leveraged Maven, JUnit, GitHub Actions(CI/CD) to manage dependencies, package executable JAR artifacts, and automate testing and builds.
+\end{resume_list}
+
+%------------%
+% Experience %
+%------------%
+
+\section{Experience}
+
+\headingBf{VP of Technology at AGEEI-UQAM (Comp. Sci Student Association)}{Jan. 2026 -- Present}
+\begin{resume_list}
+\item Migrated the association’s Angular-based website from GitLab Pages to Microsoft Azure, transitioned DNS to Cloudflare, and secured an Azure Nonprofit grant, improving reliability while reducing infrastructure costs.
+\item Architected and deployed a containerized Spring Boot REST API with PostgreSQL to Azure App Service using CI/CD (GitLab CI), delivering a centralized, database-driven events management system.
+\item Deployed Passbolt and implemented secure credential management practices, replacing legacy password sharing.
+\end{resume_list}
+
+\headingBf{Computer Science Teaching Assistant at UQAM}{Oct. 2024 -- Present}
+\begin{resume_list}
+\item Collaborated with course instructors to design and delivered lab sessions covering Java, Linux, Git, debugging, and object-oriented programming fundamentals.
+\item Tutored students in core CS courses including Java, OOP, Assembly, Linux, and Data Structures \& Algorithms.
+\item Facilitated Linux workshops and authored an install guide to streamline onboarding. {\footnotesize \href{https://github.com/George-Fam/LinuxInstallGuide}{\faGithubSquare\ George-Fam/LinuxInstallGuide}}
+\item Developed lab materials to reinforce data structures and software tooling knowledge. {\footnotesize \href{https://github.com/George-Fam/UQAM-Labos}{\faGithubSquare\ George-Fam/UQAM-Labos}}
+\end{resume_list}
+
+\headingBf{Pharmacy Technician at Jean Coutu}{Sept. 2022 -- Feb. 2025}
+\begin{resume_list}
+\item Delivered high-volume customer support and medical data entry, triaging requests while maintaining accuracy, confidentiality, and time-sensitive service targets.
+\end{resume_list}
 
 %--------%
 % Skills %
@@ -74,122 +115,15 @@ Software engineering student with a strong interest in backend development, clou
 \section{Skills}
 
 \begin{multicols}{2}
-    \begin{itemize}[itemsep=-2px, parsep=5pt, leftmargin=75pt]
-        \item[\textbf{Languages}] Java, C, C++, TypeScript, JavaScript, Bash, PowerShell
-        \item[\textbf{Frontend}] HTML/CSS, Tailwind CSS, Angular
-        \item[\textbf{Backend}] Spring Boot, Spring MVC, Spring Data JPA, REST APIs
-        \item[\textbf{Databases}] MySQL, Oracle SQL
-        \item[\textbf{Testing}] JUnit, Mockito, BATS
-            \columnbreak
-        \item[\textbf{Core CS}] Data Structures \& Algorithms, OOP, Complexity Analysis
-        \item[\textbf{DevOps}] Docker, Docker Compose, Podman, Nginx, Git, Maven, GitHub Actions, GitLab CI
-        \item[\textbf{Cloud}] Google Cloud Compute Engine
-        \item[\textbf{Languages}] English, French, Arabic
-    \end{itemize}
+  \begin{itemize}[itemsep=-2px, parsep=5pt, leftmargin=75pt]
+    \item[\textbf{Languages}] Java, C, C++, TypeScript, JavaScript, Bash, PowerShell, Python
+    \item[\textbf{Frontend}] Angular, HTML/CSS, Tailwind CSS, 
+    \item[\textbf{Backend}] Spring Boot (MVC, Spring Data JPA), REST APIs, MySQL, Oracle SQL
+    \item[\textbf{Testing}] JUnit, Mockito, BATS
+    \item[\textbf{DevOps}] Docker, Docker Compose, Nginx, Git, Maven, GitHub Actions, GitLab CI
+    \item[\textbf{Cloud}] Google Cloud Platform (GCP), Azure
+    \item[\textbf{Languages}] English, French, Arabic
+  \end{itemize}
 \end{multicols}
-
-%------------%
-% Experience %
-%------------%
-
-\section{Experience}
-
-\headingBf{VP of Technology}{Jan. 2026 -- Present}
-\headingIt{AGEEI-UQAM}{}
-\begin{resume_list}
-\item Manage and maintain the student association’s digital infrastructure, including the website, servers, and internal communication platforms.
-\end{resume_list}
-
-\headingBf{Computer Science Teaching Assistant}{Oct. 2024 -- Present}
-\headingIt{UQÀM | Université du Québec à Montréal}{}
-\begin{resume_list}
-\item Explain fundamental computer science concepts, answer technical questions, and assist with debugging during laboratory sessions (13 labs per course, $\leq$ 50 students) and tutoring sessions.
-\item Lead Linux workshops (install, config, troubleshooting) and maintain an install guide. {\footnotesize \href{https://github.com/George-Fam/LinuxInstallGuide}{\faGithubSquare\ George-Fam/LinuxInstallGuide}}
-\item Design visual-aids and quizzes to reinforce key concepts in laboratory sessions. {\footnotesize \href{https://github.com/George-Fam/UQAM-Labos}{\faGithubSquare\ George-Fam/UQAM-Labos}}
-\item Grade exams and assignments using standardized rubrics, ensuring consistency, fairness, and clarity of feedback.
-    \vspace{2pt}
-\item[] \textit{Lab Demonstrations \& Grading: Programming II, Linux System Usage and Administration, Software Development Tools and Practices.}
-\item[] \textit{Tutoring: First- and second-year computer science courses (including Data Structures and Algorithms).}
-\end{resume_list}
-
-\headingBf{Pharmacy Technician}{Sept. 2022 -- Feb. 2025}
-\headingIt{Jean Coutu}{}
-\begin{resume_list}
-\item Delivered high-volume customer support and medical data entry, managing 500+ prescriptions daily with accuracy and confidentiality.
-\item Triaged incoming requests (new prescriptions, renewals, insurance issues, clarifications) to meet time-sensitive service targets.
-\end{resume_list}
-
-\headingBf{Tutor}{Oct. 2022 -- June 2023}
-\headingIt{Pierrefonds Community Project}{}
-\begin{resume_list}
-\item Assisted students with homework and exam preparation
-\item Organized small group learning sessions and interactive games to boost academic motivation
-\end{resume_list}
-
-\headingBf{Assistant Manager}{July 2018 -- July 2020}
-\headingIt{Couche-Tard}{}
-\begin{resume_list}
-\item Trained new team members on point-of-sale systems and customer service
-\item Prepared financial reports and made bank deposits.
-\end{resume_list}
-
-\pagebreak
-
-%----------------------------%
-% Extracurricular Activities %
-%----------------------------%
-
-\section{Projects}
-
-\headingBf{Donate With Athena {\small \href{https://github.com/Morgan-Stanley-CtG-Team-3/CodeToGiveTeam3Montreal}{\faGithubSquare\ Donate With Athena}}}{Spring Boot, Angular, MySQL, Docker, Nginx, GCP, Tailwind, n8n}
-\begin{resume_list}
-\item Built a full-stack donation, subscription, and engagement platform for Shield of Athena during Morgan Stanley’s Code to Give Hackathon.
-    \vspace{2pt}
-\item Designed and implemented REST APIs (donations, events, quizzes, badges, subscriptions) with Spring Boot and MySQL (JPA/Hibernate).
-    \vspace{2pt}
-\item Collaborated on the Angular frontend to integrate REST APIs, while assisting with multi-language support.
-    \vspace{2pt}
-\item Deployed on Google Cloud using Docker Compose, Nginx reverse proxy and SSL.
-    \vspace{2pt}
-\item Integrated AI workflows (ChatBot, Phone VoiceBot, Social Media Post Maker \& Uploader) using n8n and Tidio for donor assistance and automated outreach.
-    \vspace{2pt}
-\item Delivered a platform centralizing donor support, recurring donations, awareness quizzes, badge progression, donation events, and automated notifications.
-\end{resume_list}
-
-\headingBf{LaTeX CV \& Cover Letter Automation {\small\href{https://github.com/George-Fam/Resume}{\faGithubSquare\ George-Fam/Resume}}}{PowerShell, LaTeX, GitHub Actions}
-\begin{resume_list}
-\item Built a PowerShell-based automation system to compile multilingual CVs and cover letters.
-    \vspace{2pt}
-\item Added batch/targeted compilation, digital signature embedding, and version tracking.
-\end{resume_list}
-
-\headingBf{Toolbelt Utilities {\small \href{https://github.com/George-Fam/Toolbelt}{\faGithubSquare\ George-Fam/Toolbelt}}}{PowerShell}
-\begin{resume_list}
-\item Built a small collection of workflow utilities including a Git bootstrapper, Plex backlog visualizer, and a privileged forced-delete script.
-\end{resume_list}
-
-\headingBf{AVL Tree Implementation (INF3105: DSA) {\small \href{https://github.com/George-Fam/AVLTree}{\faGithubSquare\ George-Fam/AVLTree}}}{C++}
-\begin{resume_list}
-\item Implemented an AVL tree supporting insert, delete, search, and automatic rebalancing; ranked \#1 in class on the project.
-    \vspace{2pt}
-\item Analyzed complexity and validated correctness through structured tests.
-\end{resume_list}
-
-\headingBf{Land Value Analyzer (INF2050: Dev Tools \& Practices) {\small \href{https://github.com/George-Fam/land-value-analyzer}{\faGithubSquare\ George-Fam/land-value-analyzer}}}{Java, JUnit, Maven, GH Actions}
-\begin{resume_list}
-\item Implemented a JSON-based property value calculator with structured output.
-    \vspace{2pt}
-\item Used Maven for dependency management, build automation, and test execution.
-\end{resume_list}
-
-\headingBf{Circles (INF3135: Software Construction) {\small \href{https://github.com/George-Fam/Circles}{\faGithubSquare\ George-Fam/Circles}}}{C, SDL2, Bash}
-\begin{resume_list}
-\item Developed an arcade-style game inspired by \textit{Super Hexagon} using SDL2 for graphics and animation.
-\end{resume_list}
-
-\headingBf{Tower Defense Game (INF2120: Programming II) {\small \href{https://github.com/George-Fam/java-tower-defense}{\faGithubSquare\ George-Fam/java-tower-defense}}}{Java, Swing, JUnit}
-\begin{resume_list}
-\item Added gameplay features and UI components for a Tower Defense-style game in Swing.
-\end{resume_list}
 
 \end{document}
