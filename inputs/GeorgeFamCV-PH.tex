@@ -7,49 +7,26 @@
 %%%%
 \documentclass[letterpaper,10pt]{article}
 \usepackage{mteck}
-\usepackage{fancyhdr}
-
-%===================%
-% George Fam's Resume %
-%===================%
 
 \begin{document}
-%---------%
-% Heading %
-%---------%
-\documentTitle{George Fam}{
-	\href{tel:5146639709}{
-	\raisebox{-0.05\height} \faPhone\ 514-663-9709} ~ | ~
-	\href{mailto:george.fam@famcode.net}{
-	\raisebox{-0.15\height} \faEnvelope\ george.fam@famcode.net} ~ | ~
-	\href{https://www.linkedin.com/in/george-fam/}{
-	\raisebox{-0.15\height} \faLinkedin\ linkedin.com/in/george-fam}
-}
 
-%---------%
-% Summary %
-%---------%
+\documentTitle{George Fam}{
+  \phone{5146639709}{514-663-9709}\contactSep
+  \email{fam.george@courrier.uqam.ca}\contactSep
+  \linkedin{https://www.linkedin.com/in/george-fam/}{linkedin.com/in/george-fam}\contactSep
+}
 
 \tinysection{Summary}
 Organized and detail-oriented Pharmacy Technician with strong experience in prescription interpretation, medication preparation, and customer service. Adept at using pharmacy management software such as RxPro, AssystRx, and Ubiq to manage prescriptions and maintain accurate records. Proven ability to work under pressure while maintaining patient safety and confidentiality. Strong communication skills, developed through extensive work in both pharmacy settings and retail settings, make me effective at collaborating with both patients and healthcare professionals. Passionate about delivering exceptional service.
 
-%--------%
-% Skills %
-%--------%
-
 \section{Skills}
 
-\begin{multicols}{2}
-	\begin{itemize}[itemsep=-2px, parsep=5pt, leftmargin=75pt]
-		\item[\textbf{Pharmacy}]  RxPro, AssystRx, Ubiq, Empego, Magistral Meds, Medication Ordering, Prescription Preparation
-		\item[\textbf{Soft Skills}]  Communication, Teamwork, Conflict Resolution, Active Listening, Customer Service
-		\item[\textbf{Languages}]  English, French, Arabic
-	\end{itemize}
-\end{multicols}
-
-%------------%
-% Experience %
-%------------%
+\begin{skill_list}
+  \skill{Pharmacy}{RxPro, AssystRx, Ubiq, Empego, Magistral Meds, Medication Ordering, Prescription Preparation}
+  \skill{Soft Skills}{Communication, Teamwork, Conflict Resolution, Active Listening, Customer Service}
+  \skill{Languages}{English, French, Arabic}
+\end{skill_list}
+\section{Expérience}
 
 \section{Experience}
 
@@ -83,10 +60,6 @@ Organized and detail-oriented Pharmacy Technician with strong experience in pres
 \item Monitored daily cash intake, prepared financial reports, and made bank deposits.
 \item Boosted holiday sales by 12\% through effective product promotion and sales strategies.
 \end{resume_list}
-
-%-----------%
-% Education %
-%-----------%
 
 \section{Education}
 

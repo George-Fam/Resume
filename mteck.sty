@@ -132,3 +132,41 @@
 
 % Bullets used in itemized lists
 \renewcommand\labelitemi{--}
+
+%----------------------%
+% Contact icon helpers %
+%----------------------%
+% Usage inside \documentTitle{Name}{...}:
+%   \phone{5146639709}{514-663-9709}\contactSep\email{you@example.com}
+\newcommand{\contactSep}{ ~ | ~ }
+\newcommand{\phone}[2]{\href{tel:#1}{\raisebox{-0.05\height}\faPhone\ #2}}
+\newcommand{\email}[1]{\href{mailto:#1}{\raisebox{-0.15\height}\faEnvelope\ #1}}
+\newcommand{\website}[2]{\href{#1}{\raisebox{-0.15\height}\faGlobe\ #2}}
+% Brand icons (LinkedIn, GitHub, GitLab) need explicit \textcolor to override
+% FontAwesome's brand palette when used inside hyperref links.
+\newcommand{\linkedin}[2]{\href{#1}{\textcolor{accentText}{\raisebox{-0.15\height}\faLinkedin}\ #2}}
+\newcommand{\github}[2]{\href{#1}{\textcolor{accentText}{\raisebox{-0.15\height}\faGithubSquare}\ #2}}
+
+%------------------------------%
+% Inline project/bullet helpers%
+%------------------------------%
+% Usage inside \headingBf{Name {\ghlink{URL}{Display}}}{}
+\newcommand{\ghlink}[2]{{\small\href{#1}{\textcolor{accentText}{\faGithubSquare}\ #2}}}
+\newcommand{\gllink}[2]{{\small\href{#1}{\textcolor{accentText}{\faGitlab}\ #2}}}
+\newcommand{\weblink}[2]{{\small\href{#1}{\faGlobe\ #2}}}
+
+%-------------------------------------------%
+% Two-column skills list                    %
+%-------------------------------------------%
+% Usage:
+%   \begin{skill_list}
+%     \skill{Languages}{Java, C++, Python}
+%   \end{skill_list}
+\newenvironment{skill_list}{%
+  \begin{multicols}{2}%
+  \begin{itemize}[itemsep=-2px, parsep=5pt, leftmargin=75pt]%
+}{%
+  \end{itemize}%
+  \end{multicols}%
+}
+\newcommand{\skill}[2]{\item[\textbf{#1}] #2}

@@ -8,17 +8,9 @@
 
 \documentclass[letterpaper,10pt]{article}
 \usepackage{mteck}
-\usepackage{fancyhdr}
-
-%===================%
-% George Fam’s Resume %
-%===================%
 
 \begin{document}
 
-%----------%
-% Metadata %
-%----------%
 \hypersetup{
   pdfinfo={
     Title={George Fam -- CV Génie Logiciel},
@@ -28,23 +20,12 @@
   }
 }
 
-%---------%
-% Heading %
-%---------%
 \documentTitle{George Fam}{
-    \href{tel:5146639709}{
-    \raisebox{-0.05\height} \faPhone\ 514-663-9709} ~ | ~
-    \href{mailto:fam.george@courrier.uqam.ca}{
-    \raisebox{-0.15\height} \faEnvelope\ fam.george@courrier.uqam.ca} ~ | ~
-    \href{https://www.linkedin.com/in/george-fam/}{
-    \raisebox{-0.15\height} \faLinkedin\ linkedin.com/in/george-fam} ~ | ~
-    \href{https://www.github.com/George-Fam}{
-    \raisebox{-0.15\height} \faGithubSquare\ github.com/George-Fam}
+  \phone{5146639709}{514-663-9709}\contactSep
+  \email{fam.george@courrier.uqam.ca}\contactSep
+  \linkedin{https://www.linkedin.com/in/george-fam/}{linkedin.com/in/george-fam}\contactSep
+  \github{https://www.github.com/George-Fam}{github.com/George-Fam}
 }
-
-%-----------%
-% Education %
-%-----------%
 
 \section{Éducation}
 
@@ -55,13 +36,9 @@
 \end{resume_list}
 \vspace{-4pt}
 
-%----------------------------%
-% Extracurricular Activities %
-%----------------------------%
-
 \section{Projets}
 
-\headingBf{Donate With Athena {\small \href{https://github.com/Morgan-Stanley-CtG-Team-3/CodeToGiveTeam3Montreal}{\faGithubSquare\ Donate With Athena}}}{}
+\headingBf{Donate With Athena {\weblink{https://donatewithathena.com}{donatewithathena.com} \ghlink{https://github.com/Morgan-Stanley-CtG-Team-3/CodeToGiveTeam3Montreal}{Donate With Athena}}}{}
 \begin{resume_list}
 \item Collaboré au sein d’une équipe de 5 personnes pour développer une plateforme de dons gamifiée full-stack (Java, TypeScript, Spring Boot, Angular, MySQL, API REST) afin d’améliorer l’engagement des donateurs.
 \item Classé 2\textsuperscript{e} sur 14 équipes au hackathon Code to Give de Morgan Stanley pour Shield of Athena, un organisme qui soutient les femmes et les enfants confrontés à la violence conjugale.
@@ -69,7 +46,7 @@
 \item Mis en place un système d’automatisation des médias sociaux assisté par IA avec n8n pour centraliser la publication multi-plateforme et simplifier la rédaction de contenu pour l’équipe marketing.
 \end{resume_list}
 
-\headingBf{Automatisation CV \& Lettres de Motivation LaTeX {\small\href{https://github.com/George-Fam/Resume}{\faGithubSquare\ George-Fam/Resume}}}{}
+\headingBf{Automatisation CV \& Lettres de Motivation LaTeX {\ghlink{https://github.com/George-Fam/Resume}{George-Fam/Resume}}}{}
 \begin{resume_list}
 \item Conçu un pipeline d’automatisation PowerShell \& Python pour générer des CV et des lettres de motivation.
 \item Mis en place de workflows GitHub Actions (CI/CD) pour automatiser la validation, le versionnement et des builds PDF reproductibles, éliminant la compilation manuelle.
@@ -96,17 +73,17 @@
 \begin{resume_list}
 \item Développé une application Java sur Azure Functions intégrant Directus CMS à Google Calendar via webhooks et une tâche cron nocturne, déployée via GitLab CI.
 \item Déployé Docker Compose et Nginx sur Azure pour héberger les services internes (Vaultwarden, Snipe-IT, Directus CMS) avec DNS Cloudflare et sauvegardes chiffrées automatisées.
-\item Mis en place une plateforme CTFd et Nginx et conçu des défis CTF originaux couvrant la cryptographie, la stéganographie et la rétro-ingénierie. {\footnotesize \href{https://easter.ageei.org}{\faGlobe\ easter.ageei.org}}
+\item Mis en place une plateforme CTFd et Nginx et conçu des défis CTF originaux couvrant la cryptographie, la stéganographie et la rétro-ingénierie. {\footnotesize \weblink{https://easter.ageei.org}{easter.ageei.org}}
 \item Développé un tableau de bord JavaScript automatisant la gestion de l’admissibilité aux photos de graduation avec notifications par courriel HTML.
 \end{resume_list}
 
 \headingBf{Auxiliaire d’Enseignement en Informatique, UQAM}{Oct. 2024 -- Présent}
 \begin{resume_list}
 \item Animé des séances de laboratoire et dispensé du monitorat en Java, Linux, Git, et OOP.
-\item Animation d’ateliers Linux et rédaction d’un guide d’installation. {\footnotesize \href{https://github.com/George-Fam/LinuxInstallGuide}{\faGithubSquare\ George-Fam/LinuxInstallGuide}}
-\item Développement de matériel pédagogique pour renforcer les connaissances. {\footnotesize \href{https://github.com/George-Fam/UQAM-Labos}{\faGithubSquare\ George-Fam/UQAM-Labos}}
+\item Animation d'ateliers Linux et rédaction d'un guide d'installation. {\footnotesize \ghlink{https://github.com/George-Fam/LinuxInstallGuide}{George-Fam/LinuxInstallGuide}}
+\item Développement de matériel pédagogique pour renforcer les connaissances. {\footnotesize \ghlink{https://github.com/George-Fam/UQAM-Labos}{George-Fam/UQAM-Labos}}
 \item[] \textit{Démonstration en Laboratoire : INF2120 (Prog. II), INF1070 (Linux), INF2050 (Outils Dev.).}
-\item[] \textit{Monitorat : Cours d’informatique de 1\textsuperscript{re} et 2\textsuperscript{e} année (incluant Structures de Données et Algorithmes).}
+\item[] \textit{Monitorat : Cours d'informatique de 1\textsuperscript{re} et 2\textsuperscript{e} année (incluant Structures de Données et Algorithmes).}
 \end{resume_list}
 
 \headingBf{Assistant Technique en Pharmacie, Jean Coutu}{Sept. 2022 -- Fév. 2025}
@@ -115,23 +92,16 @@
 \end{resume_list}
 
 
-%--------%
-% Skills %
-%--------%
-
 \section{Compétences}
 
-\begin{multicols}{2}
-  \begin{itemize}[itemsep=-2px, parsep=5pt, leftmargin=75pt]
-    \item[\textbf{Langages}] Java, C, C++, TypeScript, JavaScript, Bash, PowerShell, Python
-    \item[\textbf{Frontend}] Angular, HTML/CSS, Tailwind CSS
-    \item[\textbf{Backend}] Spring Boot (MVC, Spring Data JPA), API REST, MySQL, Oracle SQL
-    \item[\textbf{Tests}] JUnit, Mockito, BATS
-    \item[\textbf{DevOps}] Docker, Docker Compose, Nginx, Git, Maven, GitHub Actions, GitLab CI
-    \item[\textbf{Cloud}] Google Cloud Platform (GCP), Azure
-    \item[\textbf{Langues}] Français, Anglais, Arabe
-  \end{itemize}
-\end{multicols}
-
+\begin{skill_list}
+  \skill{Langages}{Java, C, C++, TypeScript, JavaScript, Bash, PowerShell, Python}
+  \skill{Frontend}{Angular, Angular Material, HTML/CSS, SCSS, Tailwind CSS}
+  \skill{Backend}{Spring Boot (MVC, Spring Data JPA), API REST, MySQL, Oracle SQL}
+  \skill{Tests}{JUnit, Mockito, BATS}
+  \skill{DevOps}{Docker, Docker Compose, Nginx, Git, Maven, GitHub Actions, GitLab CI}
+  \skill{Cloud}{Google Cloud Platform (GCP), Azure}
+  \skill{Langues}{Français, Anglais, Arabe}
+\end{skill_list}
 
 \end{document}

@@ -8,17 +8,9 @@
 
 \documentclass[letterpaper,10pt]{article}
 \usepackage{mteck}
-\usepackage{fancyhdr}
-
-%===================%
-% George Fam's Resume %
-%===================%
 
 \begin{document}
 
-%----------%
-% Metadata %
-%----------%
 \hypersetup{
   pdfinfo={
     Title={George Fam -- Gameplay and Systems Programming Resume},
@@ -29,18 +21,11 @@
   }
 }
 
-%---------%
-% Heading %
-%---------%
 \documentTitle{George Fam}{
-    \href{tel:5146639709}{
-    \raisebox{-0.05\height} \faPhone\ 514-663-9709} ~ | ~
-    \href{mailto:fam.george@courrier.uqam.ca}{
-    \raisebox{-0.15\height} \faEnvelope\ fam.george@courrier.uqam.ca} ~ | ~
-    \href{https://www.linkedin.com/in/george-fam/}{
-    \raisebox{-0.15\height} \faLinkedin\ linkedin.com/in/george-fam} ~ | ~
-    \href{https://www.github.com/George-Fam}{
-    \raisebox{-0.15\height} \faGithubSquare\ github.com/George-Fam}
+  \phone{5146639709}{514-663-9709}\contactSep
+  \email{fam.george@courrier.uqam.ca}\contactSep
+  \linkedin{https://www.linkedin.com/in/george-fam/}{linkedin.com/in/george-fam}\contactSep
+  \github{https://www.github.com/George-Fam}{github.com/George-Fam}
 }
 
 %-----------%
@@ -57,7 +42,7 @@
 
 \section{Projects}
 
-\headingBf{Donate With Athena {\small \href{https://github.com/Morgan-Stanley-CtG-Team-3/CodeToGiveTeam3Montreal}{\faGithubSquare\ Donate With Athena}}}{}
+\headingBf{Donate With Athena {\weblink{https://donatewithathena.com}{donatewithathena.com} \ghlink{https://github.com/Morgan-Stanley-CtG-Team-3/CodeToGiveTeam3Montreal}{Donate With Athena}}}{}
 \begin{resume_list}
 \item Collaborated in a 5-person team to design and build a full-stack gamified donation platform using Java, TypeScript, Spring Boot, Angular, MySQL, and REST APIs to increase donor engagement.
 \item Awarded 2\textsuperscript{nd} place out of 14 teams during Morgan Stanley’s Code to Give Hackathon for Shield of Athena, a nonprofit supporting women and children facing domestic violence.
@@ -65,21 +50,21 @@
 \item Built an AI-assisted social media automation system using n8n to enable centralized, multi-platform posting and streamline content drafting for the nonprofit’s marketing team.
 \end{resume_list}
 
-\headingBf{Circles {\small \href{https://github.com/George-Fam/Circles}{\faGithubSquare\ George-Fam/Circles}}}{}
+\headingBf{Circles {\ghlink{https://github.com/George-Fam/Circles}{George-Fam/Circles}}}{}
 \begin{resume_list}
 \item Developed an arcade-style game using C and SDL2, featuring player movement, obstacle spawning, collision handling, and time-based difficulty scaling.
 \item Worked directly with SDL2 subsystems to manage event loops, rendering, and player controls.
 \item Debugged and refined gameplay logic to ensure consistent behavior across supported platforms.
 \end{resume_list}
 
-\headingBf{Tower Defense Game {\small \href{https://github.com/George-Fam/java-tower-defense}{\faGithubSquare\ George-Fam/java-tower-defense}}}{}
+\headingBf{Tower Defense Game {\ghlink{https://github.com/George-Fam/java-tower-defense}{George-Fam/java-tower-defense}}}{}
 \begin{resume_list}
 \item Developed a tower defense game in Java using Object-Oriented design, implementing multiple tower types via inheritance with distinct behaviors and upgrade paths.
 \item Designed time-based status effects (slow, damage-over-time) executed over fixed simulation ticks, requiring state tracking and effect reset logic.
 \item Implemented enemy targeting, range detection, and prioritization within a real-time game loop.
 \end{resume_list}
 
-\headingBf{AVL Tree Implementation {\small \href{https://github.com/George-Fam/AVLTree}{\faGithubSquare\ George-Fam/AVLTree}}}{}
+\headingBf{AVL Tree Implementation {\ghlink{https://github.com/George-Fam/AVLTree}{George-Fam/AVLTree}}}{}
 \begin{resume_list}
 \item Used C++ to implement an AVL tree with set operations and developed structured tests to validate correctness and performance; ranked 1\textsuperscript{st} out of 116 in class evaluation.
 \end{resume_list}
@@ -100,8 +85,8 @@
 \begin{resume_list}
 \item Collaborated with course instructors to design and delivered lab sessions covering Java, Linux, Git, debugging, and object-oriented programming fundamentals.
 \item Tutored students in core CS courses including Java, OOP, Assembly, Linux, and Data Structures \& Algorithms.
-\item Facilitated Linux workshops and authored an install guide to streamline onboarding. {\footnotesize \href{https://github.com/George-Fam/LinuxInstallGuide}{\faGithubSquare\ George-Fam/LinuxInstallGuide}}
-\item Developed lab materials to reinforce data structures and software tooling knowledge. {\footnotesize \href{https://github.com/George-Fam/UNIVERSITY-Labos}{\faGithubSquare\ George-Fam/UQAM-Labos}}
+\item Facilitated Linux workshops and authored an install guide to streamline onboarding. {\footnotesize \ghlink{https://github.com/George-Fam/LinuxInstallGuide}{George-Fam/LinuxInstallGuide}}
+\item Developed lab materials to reinforce data structures and software tooling knowledge. {\footnotesize \ghlink{https://github.com/George-Fam/UNIVERSITY-Labos}{George-Fam/UQAM-Labos}}
 \end{resume_list}
 
 \headingBf{Pharmacy Technician at Jean Coutu}{Sept. 2022 -- Feb. 2025}
@@ -109,20 +94,15 @@
 \item Delivered high-volume customer support and medical data entry, triaging requests while maintaining accuracy, confidentiality, and time-sensitive service targets.
 \end{resume_list}
 
-%--------%
-% Skills %
-%--------%
-
 \section{Skills}
 
-\begin{multicols}{2}
-    \begin{itemize}[itemsep=-2px, parsep=5pt, leftmargin=75pt]
-        \item[\textbf{Languages}] C++, C, Java, JavaScript, Bash, PowerShell
-        \item[\textbf{Backend}] Spring Boot (MVC, Spring Data JPA), REST APIs, MySQL, Oracle SQL
-		\item[\textbf{Games}] SDL2, Event Loops, Input Handling
-        \item[\textbf{Testing}] JUnit, Mockito, BATS
-        \item[\textbf{DevOps}] Docker, Docker Compose, Nginx, Git, GitHub Actions, GitLab CI
-        \item[\textbf{Languages}] English, French, Arabic
-    \end{itemize}
-\end{multicols}
+\begin{skill_list}
+  \skill{Languages}{C++, C, Java, JavaScript, Bash, PowerShell}
+  \skill{Backend}{Spring Boot (MVC, Spring Data JPA), REST APIs, MySQL, Oracle SQL}
+  \skill{Games}{SDL2, Event Loops, Input Handling}
+  \skill{Testing}{JUnit, Mockito, BATS}
+  \skill{DevOps}{Docker, Docker Compose, Nginx, Git, GitHub Actions, GitLab CI}
+  \skill{Languages}{English, French, Arabic}
+\end{skill_list}
+
 \end{document}
