@@ -8,6 +8,7 @@
 
 \documentclass[letterpaper,10pt]{article}
 \usepackage{mteck}
+\usepackage{fancyhdr}
 
 \begin{document}
 
@@ -24,7 +25,8 @@
   \phone{5146639709}{514-663-9709}\contactSep
   \email{fam.george@courrier.uqam.ca}\contactSep
   \linkedin{https://www.linkedin.com/in/george-fam/}{linkedin.com/in/george-fam}\contactSep
-  \github{https://www.github.com/George-Fam}{github.com/George-Fam}
+  \github{https://www.github.com/George-Fam}{github.com/George-Fam}\contactSep
+  \website{https://famcode.net}{famcode.net}
 }
 
 \section{Éducation}
@@ -38,7 +40,7 @@
 
 \section{Projets}
 
-\headingBf{Donate With Athena {\weblink{https://donatewithathena.com}{donatewithathena.com} \ghlink{https://github.com/Morgan-Stanley-CtG-Team-3/CodeToGiveTeam3Montreal}{Donate With Athena}}}{}
+\headingBf{Donate With Athena {\weblink{https://donatewithathena.com}{donatewithathena.com} \ghlink{https://github.com/George-Fam/DonateWithAthena}{George-Fam/DonateWithAthena}}}{}
 \begin{resume_list}
 \item Classé 2\textsuperscript{e} sur 14 équipes au hackathon Code to Give de Morgan Stanley pour Shield of Athena, un organisme qui soutient les femmes et les enfants confrontés à la violence conjugale.
 \item Collaboré au sein d'une équipe de 5 personnes pour développer une plateforme de dons gamifiée full-stack (Java, TypeScript, Spring Boot, Angular, MySQL, API REST) afin d'améliorer l'engagement des donateurs.
@@ -46,10 +48,17 @@
 \item Mis en place un système d'automatisation des médias sociaux assisté par IA avec n8n pour centraliser la publication multi-plateforme et simplifier la rédaction de contenu pour l'équipe marketing.
 \end{resume_list}
 
+\headingBf{Fork Open Source -- plezy-tizen {\ghlink{https://github.com/George-Fam/plezy-tizen}{George-Fam/plezy-tizen}}}{}
+\begin{resume_list}
+\item Utilisé Dart et C\# pour ajouter la prise en charge de Samsung Tizen TV à un client Plex/Jellyfin basé sur Flutter et distribué sur l'App Store et Google Play, en écrivant de zéro un lecteur multimédia natif en C\# avec rendu par superposition matérielle.
+\item Utilisé les method channels et event channels de Flutter pour relier l'interface Dart au lecteur natif C\#, en implémentant le contrôle de lecture, le déplacement dans la vidéo et le routage des touches de télécommande TV des deux côtés du pont.
+\item Utilisé GitHub Actions pour étendre le pipeline CI/CD du projet avec une tâche de compilation Tizen, produisant un artéfact TPK signé pour la publication.
+\end{resume_list}
+
 \headingBf{AGEEI.org -- Plateforme d'Association Étudiante {\weblink{https://ageei.org}{ageei.org} \gllink{https://gitlab.com/ageei/ageei.org}{gitlab.com/ageei/ageei.org}}}{}
 \begin{resume_list}
 \item Développé une plateforme full-stack avec un frontend Angular 21 + Angular Material déployé sur Azure Static Web Apps et un backend Java 17 serverless sur Azure Functions, avec déploiements automatisés via GitLab CI.
-\item Livré une page Publications, une recherche FAQ en temps réel et une chronologie rétractable ; ajouté des balises Open Graph et un sitemap pour le référencement (SEO).
+\item Livré une page Publications, une recherche FAQ en temps réel et une chronologie rétractable.
 \item Implémenté une synchronisation calendrier bi-déclencheur intégrant Directus CMS à Google Calendar via webhooks et une tâche cron nocturne, en utilisant l'impersonation de compte de service Google Workspace.
 \end{resume_list}
 
@@ -66,13 +75,12 @@
 
 \headingBf{Contribution Open Source -- linutil {\ghlink{https://github.com/ChrisTitusTech/linutil}{ChrisTitusTech/linutil}}}{}
 \begin{resume_list}
-\item Corrigé une directive \texttt{source} manquante dans le script d'installation d'Ollama (\texttt{ollama.sh}), résolvant un échec à l'exécution (issue \#1222) dans une boîte à outils Linux communautaire de 28k étoiles.
+\item Diagnostiqué et corrigé un échec à l'exécution dans le script d'installation d'Ollama d'une boîte à outils Linux communautaire de 5k étoiles (\weblink{https://github.com/ChrisTitusTech/linutil/pull/1223}{PR \#1223}), rétablissant un processus d'installation brisé pour les utilisateurs de la communauté.
 \end{resume_list}
 
 \section{Expérience}
 
 \headingBf{Président d'Association Étudiante, AGEEI-UQAM}{Avr. 2026 -- Présent}
-
 \headingBf{VP Technologie d'Association Étudiante, AGEEI-UQAM}{Janv. 2026 -- Avr. 2026}
 \begin{resume_list}
 \item Développé une application Java sur Azure Functions intégrant Directus CMS à Google Calendar via webhooks et une tâche cron nocturne, déployée via GitLab CI.
@@ -81,11 +89,11 @@
 \item Développé un tableau de bord JavaScript automatisant la gestion de l'admissibilité aux photos de graduation avec notifications par courriel HTML.
 \end{resume_list}
 
-\headingBf{Auxiliaire d'Enseignement en Informatique, UQAM}{Oct. 2024 -- Présent}
+\headingBf{Auxiliaire d'Enseignement en Informatique, UQAM}{Oct. 2024 -- Mai 2026}
 \begin{resume_list}
 \item Collaboré avec les responsables de cours pour concevoir et animer des séances de laboratoire couvrant Java, Linux, Git, le débogage et les bases de la programmation orientée objet.
 \item Tutorat auprès d'étudiants en Java, POO, assembleur, Linux et structures de données \& algorithmes.
-\item Animation d'ateliers Linux et rédaction d'un guide d'installation. {\footnotesize \ghlink{https://github.com/George-Fam/LinuxInstallGuide}{George-Fam/LinuxInstallGuide}}
+\item Animation d'ateliers Linux et rédaction d'un guide d'installation pour les simplifier. {\footnotesize \ghlink{https://github.com/George-Fam/LinuxInstallGuide}{George-Fam/LinuxInstallGuide}}
 \item Développement de matériel pédagogique pour renforcer les connaissances. {\footnotesize \ghlink{https://github.com/George-Fam/UQAM-Labos}{George-Fam/UQAM-Labos}}
 \end{resume_list}
 
