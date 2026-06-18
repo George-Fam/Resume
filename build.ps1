@@ -1,3 +1,5 @@
+#!/bin/env pwsh
+
 param (
     [string]$BuildDir = "build",
     [string]$InputsDir = "inputs",

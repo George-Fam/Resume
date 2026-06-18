@@ -1,3 +1,5 @@
+#!/bin/env pwsh
+
 param (
     [string[]]$Targets = @(),
     [string]$ContentDir = "inputs/covers",

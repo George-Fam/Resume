@@ -1,3 +1,5 @@
+#!/bin/env pwsh
+
 param (
     [Parameter(Mandatory = $true)]
     [string]$CoversDir,
