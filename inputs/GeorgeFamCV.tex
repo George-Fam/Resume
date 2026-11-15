@@ -14,9 +14,9 @@
 
 \hypersetup{
   pdfinfo={
-    Title={George Fam -- Software Engineering Intern Resume},
+    Title={George Fam -- Software Engineer Resume},
     Author={George Fam},
-    Subject={Computer Science and Software Engineering Internship Resume},
+    Subject={Computer Science and Software Engineering Resume},
     Keywords={Java, C++, TypeScript, JavaScript, Spring Boot, Angular, Docker, SQL, Linux, Backend, Full-Stack, Software Engineering}
   }
 }
@@ -31,9 +31,41 @@
 
 \section{Education}
 
-\headingBf{B.Sc. Computer Science \& Software Engineering, UQAM}{Sept. 2023 -- May 2027 (Expected)}
+\headingBf{B.Sc. Computer Science \& Software Engineering, UQAM}{Sept. 2023 -- Dec. 2027 (Expected)}
 \begin{resume_list}
-\item 4\textsuperscript{th} place -- CSGames 2026, DevOps
+\item 4\textsuperscript{th} place -- CSGames 2026, DevOps ; 2\textsuperscript{nd} place -- Morgan Stanley Code to Give
+\item Ranked 1\textsuperscript{st} of 116 on a C++ course project, an AVL tree with set operations. {\footnotesize \ghlink{https://github.com/George-Fam/AVLTree}{George-Fam/AVLTree}}
+\end{resume_list}
+
+\section{Experience}
+
+\headingBf{Software Development Intern, Business Intelligence at Bell Flight (Textron)}{Aug. 2026 -- Present}
+\begin{resume_list}
+\item Own a workflow automation and digitalization application end to end, built with Angular, Spring Boot (Spring Modulith) and Azure SQL, targeting a 50\% reduction in a business process's lead time.
+\item Co-develop the migration of an Excel-fed Power BI report into a full-stack Databricks App: build the Python Flask backend on Lakebase, own platform deployment and CI/CD, and contribute to the Angular frontend.
+\item Established the software development workflow for a BI team expanding into custom applications: branching and pull-request policy, CI pipelines, and project structure in Azure DevOps.
+\item Built the team's internal marketplace of AI coding-assistant skills and agents: authored 10+ skills and 2 agents (requirements and architecture documents, architecture review against source code, Azure DevOps automation), packaged as installable plugins with a release pipeline to Artifactory.
+\end{resume_list}
+
+\headingBf{Student Association President at AGEEI-UQAM}{Apr. 2026 -- Present}
+\begin{resume_list}
+\item Lead a 12-person executive team representing 860+ undergraduate computer science students at UQAM.
+\item Launched 4 new student clubs (AI, AWS Student Builder Group, Competitive Programming, UI/UX) and revived the Game Development club, growing them to 135 active members; Tech Lead of the AWS Student Builder Group and presenter for the AI and Competitive Programming clubs.
+\item Organized Montreal's Hacktoberfest Hack Day with Major League Hacking for about 40 participants, recruiting presenters, booking venues and running the program, and built partnerships with PolyAI, AQIII and Bittensor (Exploit Summit) for workshops and a seminar.
+\item Hosted an on-campus recruiting session with RBC; relaunching the association's career fair for winter 2027, its first edition since 2020.
+\end{resume_list}
+
+\headingBf{Student Association VP of Technology at AGEEI-UQAM}{Jan. 2026 -- Apr. 2026}
+\begin{resume_list}
+\item Built a Java app on Azure Functions integrating Directus CMS with Google Calendar via webhooks and a nightly cron job, deployed via GitLab CI.
+\item Administered a production Azure VM running Vaultwarden, Snipe-IT, and Directus CMS (Redis cache, Google OpenID Connect SSO) via Docker Compose and Nginx behind Cloudflare, with automated encrypted backups to Google Drive.
+\item Set up a CTFd and Nginx competition platform and designed original CTF challenges spanning cryptography, steganography, and reverse engineering. {\footnotesize \weblink{https://easter.ageei.org}{easter.ageei.org}}
+\end{resume_list}
+
+\headingBf{Computer Science Teaching Assistant at UQAM}{Oct. 2024 -- May 2026}
+\begin{resume_list}
+\item Designed and delivered lab sessions with course instructors and tutored students in Java, OOP, Assembly, Linux, Git, debugging, and Data Structures \& Algorithms.
+\item Facilitated Linux workshops and authored an install guide and lab materials on data structures and software tooling. {\footnotesize \ghlink{https://github.com/George-Fam/LinuxInstallGuide}{George-Fam/LinuxInstallGuide} \ghlink{https://github.com/George-Fam/UQAM-Labos}{George-Fam/UQAM-Labos}}
 \end{resume_list}
 
 \section{Projects}
@@ -41,61 +73,37 @@
 \headingBf{Donate With Athena {\weblink{https://donatewithathena.com}{donatewithathena.com} \ghlink{https://github.com/George-Fam/DonateWithAthena}{George-Fam/DonateWithAthena}}}{}
 \begin{resume_list}
 \item Awarded 2\textsuperscript{nd} place out of 14 teams at Morgan Stanley's Code to Give Hackathon for Shield of Athena, a nonprofit supporting women and children facing domestic violence.
-\item Collaborated in a 5-person team to design and build a full-stack gamified donation platform using Java, TypeScript, Spring Boot, Angular, MySQL, and REST APIs to increase donor engagement.
-\item Deployed using Google Cloud Platform (GCP), Docker, and Nginx to containerize backend services.
+\item Designed and built, in a 5-person team, a full-stack gamified donation platform with Java, TypeScript, Spring Boot, Angular, MySQL, and REST APIs to increase donor engagement.
+\item Containerized backend services with Docker and deployed them on Google Cloud Platform (GCP) behind Nginx.
 \item Built an AI-assisted social media automation system using n8n to enable centralized, multi-platform posting and streamline content drafting for the nonprofit's marketing team.
+\end{resume_list}
+
+\newpage
+
+\headingBf{OptiFrame -- CodeML 2026 Hackathon {\weblink{https://optiframe.app}{optiframe.app} \ghlink{https://github.com/George-Fam/optiframe}{George-Fam/optiframe}}}{}
+\begin{resume_list}
+\item Led development in a 4-person team of an app that turns a photo of a recycled eyeglass lens into a 3D-printable frame, for the Santé Numérique Sans Frontières challenge.
+\item Built the measurement pipeline in a Spring Boot API: ArUco marker rectification (OpenCV), lens segmentation with a U-Net model exported to ONNX, and dimension extraction, measuring about 0.2 mm error in tests against a 0.5 mm target (ISO 12870).
+\item Built an Angular PWA with STL frame generation (manifold-3d) and a 3D preview (three.js), plus GitHub Actions CI for formatting, linting, tests and builds.
 \end{resume_list}
 
 \headingBf{Open Source Fork -- plezy-tizen {\ghlink{https://github.com/George-Fam/plezy-tizen}{George-Fam/plezy-tizen}}}{}
 \begin{resume_list}
-\item Used Dart and C\# to add Samsung Tizen TV platform support to a Flutter-based Plex/Jellyfin client distributed on the App Store and Google Play, writing a native C\# media player from scratch using hardware overlay rendering.
-\item Used Flutter method and event channels to bridge the Dart UI and the native C\# player, implementing playback control, seeking, and TV remote key routing on both sides of the bridge.
-\item Used GitHub Actions to extend the project's CI/CD pipeline with a Tizen build job, producing a signed TPK artifact for release.
+\item Added Samsung Tizen TV support to a Flutter-based Plex/Jellyfin client distributed on the App Store and Google Play, writing a native C\# media player from scratch with hardware overlay rendering.
+\item Bridged the Dart UI and the native C\# player with Flutter method and event channels, implementing playback control, seeking, and TV remote key routing on both sides.
+\item Extended the project's GitHub Actions CI/CD pipeline with a Tizen build job producing a signed TPK release artifact.
 \end{resume_list}
 
 \headingBf{AGEEI.org -- Student Association Platform {\weblink{https://ageei.org}{ageei.org} \gllink{https://gitlab.com/ageei/ageei.org}{gitlab.com/ageei/ageei.org}}}{}
 \begin{resume_list}
-\item Built a full-stack platform with an Angular 21 + Angular Material frontend deployed to Azure Static Web Apps and a Java 17 serverless backend on Azure Functions, with GitLab CI handling automated deployments.
-\item Delivered Publications page, real-time FAQ search, and collapsible timeline.
-\item Implemented a dual-trigger calendar sync integrating Directus CMS with Google Calendar via webhooks and a nightly cron job, using Google Workspace service account impersonation.
+\item Built a full-stack platform with an Angular 21 + Angular Material frontend on Azure Static Web Apps and a Java 17 serverless backend on Azure Functions, with content managed in Directus CMS and automated GitLab CI deployments.
 \end{resume_list}
 
-\headingBf{LaTeX CV \& Cover Letter Automation {\ghlink{https://github.com/George-Fam/Resume}{George-Fam/Resume}}}{}
+\headingBf{Open Source Contributions -- pgloader, linutil}{}
 \begin{resume_list}
-\item Engineered a PowerShell \& Python automation pipeline to generate and compile multi-version LaTeX CVs.
-\item Implemented GitHub Actions CI/CD workflows to automate document validation, versioning, and reproducible PDF builds, eliminating manual compilation and ensuring consistent artifact generation.
+\item While evaluating MSSQL-to-PostgreSQL ingestion paths, diagnosed and fixed a pgloader v4 performance regression (6.5k stars) where the MSSQL source applied INCLUDING/EXCLUDING filters only after querying metadata for every table (\weblink{https://github.com/dimitri/pgloader/pull/1785}{PR \#1785}).
+\item Diagnosed and fixed a runtime failure in the Ollama installer script of linutil, a 5k-star community Linux toolbox (\weblink{https://github.com/ChrisTitusTech/linutil/pull/1223}{PR \#1223}).
 \end{resume_list}
-
-\headingBf{AVL Tree Implementation {\ghlink{https://github.com/George-Fam/AVLTree}{George-Fam/AVLTree}}}{}
-\begin{resume_list}
-\item Used C++ to implement an AVL tree with set operations and developed tests to validate correctness and performance; ranked 1\textsuperscript{st} out of 116 in class evaluation.
-\end{resume_list}
-
-\headingBf{Open Source Contribution -- linutil {\ghlink{https://github.com/ChrisTitusTech/linutil}{ChrisTitusTech/linutil}}}{}
-\begin{resume_list}
-\item Diagnosed and fixed a runtime failure in the Ollama installer script of a 5k-star community Linux toolbox (\weblink{https://github.com/ChrisTitusTech/linutil/pull/1223}{PR \#1223}), restoring a broken installation flow for community users.
-\end{resume_list}
-
-\section{Experience}
-
-\headingBf{Student Association President at AGEEI-UQAM}{Apr. 2026 -- Present}
-\headingBf{Student Association VP of Technology at AGEEI-UQAM}{Jan. 2026 -- Apr. 2026}
-\begin{resume_list}
-\item Built a Java app on Azure Functions integrating Directus CMS with Google Calendar via webhooks and a nightly cron job, deployed via GitLab CI.
-\item Administered a production Azure VM running Vaultwarden, Snipe-IT, and Directus CMS (Redis cache, Google OpenID Connect SSO) via Docker Compose and Nginx, with Cloudflare Full SSL and automated encrypted backups to Google Drive with 30-day retention.
-\item Set up a CTFd and Nginx competition platform and designed original CTF challenges spanning cryptography, steganography, and reverse engineering. {\footnotesize \weblink{https://easter.ageei.org}{easter.ageei.org}}
-\item Built a JavaScript dashboard automating graduation photo funding eligibility with HTML email notifications.
-\end{resume_list}
-
-\headingBf{Computer Science Teaching Assistant at UQAM}{Oct. 2024 -- May 2026}
-\begin{resume_list}
-\item Collaborated with course instructors to design and delivered lab sessions covering Java, Linux, Git, debugging, and object-oriented programming fundamentals.
-\item Tutored students in core CS courses including Java, OOP, Assembly, Linux, and Data Structures \& Algorithms.
-\item Facilitated Linux workshops and authored an install guide to streamline it. {\footnotesize \ghlink{https://github.com/George-Fam/LinuxInstallGuide}{George-Fam/LinuxInstallGuide}}
-\item Developed lab materials to reinforce data structures and software tooling knowledge. {\footnotesize \ghlink{https://github.com/George-Fam/UQAM-Labos}{George-Fam/UQAM-Labos}}
-\end{resume_list}
-
-\newpage
 
 \section{Other Experience}
 
@@ -104,24 +112,16 @@
 \item Delivered high-volume customer support and medical data entry, triaging requests while maintaining accuracy, confidentiality, and time-sensitive service targets.
 \end{resume_list}
 
-\headingBf{Assistant Manager at Couche-Tard}{Jul. 2018 -- Jul. 2020}
-\begin{resume_list}
-\item Monitored daily cash intake, improving accuracy and reducing discrepancies.
-\item Boosted holiday sales by 12\% through effective product promotion.
-\item Organized front-lane merchandise to enhance visibility and drive sales.
-\item Trained new team members on POS systems and customer service.
-\end{resume_list}
-
 \section{Skills}
 
 \begin{skill_list}
-  \skill{Languages}{Java, C, C++, TypeScript, JavaScript, Bash, PowerShell, Python}
-  \skill{Frontend}{Angular, Angular Material, HTML/CSS, SCSS, Tailwind CSS}
-  \skill{Backend}{Spring Boot (MVC, Spring Data JPA), REST APIs, MySQL, Oracle SQL}
-  \skill{Testing}{JUnit, Mockito, BATS}
-  \skill{DevOps}{Docker, Docker Compose, Nginx, Git, Maven, GitHub Actions, GitLab CI}
-  \skill{Cloud}{Google Cloud Platform (GCP), Azure}
-  \skill{Languages}{English, French, Arabic}
+  \skill{Languages}{Java, C++, TypeScript, JavaScript, Bash, PowerShell, Python}
+  \skill{Frontend}{Angular, Angular Material, HTML/CSS, SCSS}
+  \skill{Backend}{Spring Boot (MVC, Data JPA, Modulith), Flask, REST APIs, PostgreSQL, Azure SQL, MySQL}
+  \skill{Testing}{JUnit, Mockito}
+  \skill{DevOps}{Docker, Docker Compose, Nginx, Git, Maven, GitHub Actions, GitLab CI, Azure DevOps}
+  \skill{Cloud \& Data}{Azure, Google Cloud Platform (GCP), Databricks, Power BI, OpenCV}
+  \skill{Spoken}{English, French, Arabic}
 \end{skill_list}
 
 \end{document}

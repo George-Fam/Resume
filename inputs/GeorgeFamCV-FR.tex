@@ -14,9 +14,9 @@
 
 \hypersetup{
   pdfinfo={
-    Title={George Fam -- CV Stage en Génie Logiciel},
+    Title={George Fam -- CV Génie Logiciel},
     Author={George Fam},
-    Subject={Stage en Informatique et Génie Logiciel},
+    Subject={Informatique et Génie Logiciel},
     Keywords={Java, C++, TypeScript, JavaScript, Spring Boot, Angular, Docker, SQL, Linux, Backend, Full-Stack, Génie logiciel}
   }
 }
@@ -29,98 +29,100 @@
   \website{https://famcode.net}{famcode.net}
 }
 
-\section{Éducation}
+\section{Formation}
 
-\headingBf{Baccalauréat en Informatique et Génie Logiciel, UQAM}{Sept. 2023 -- Mai 2027 (Prévu)}
+\headingBf{Baccalauréat en informatique et génie logiciel, UQAM}{Sept. 2023 -- Déc. 2027 (Prévu)}
 \vspace{-4pt}
 \begin{resume_list}
-\item 4\textsuperscript{e} place -- CSGames 2026, DevOps
+\item 4\textsuperscript{e} place -- CSGames 2026, DevOps ; 2\textsuperscript{e} place -- Morgan Stanley Code to Give
+\item Classé 1\textsuperscript{er} sur 116 pour un projet de cours en C++ (arbre AVL). {\footnotesize \ghlink{https://github.com/George-Fam/AVLTree}{George-Fam/AVLTree}}
 \end{resume_list}
 \vspace{-4pt}
+
+\section{Expérience}
+
+\headingBf{Stagiaire en développement logiciel, intelligence d'affaires, Bell Flight (Textron)}{Août 2026 -- Présent}
+\begin{resume_list}
+\item Responsable de bout en bout d'une application d'automatisation et de numérisation de flux de travail, développée avec Angular, Spring Boot (Spring Modulith) et Azure SQL, visant à réduire de 50~\% le délai d'un processus d'affaires.
+\item Co-développement de la migration d'un rapport Power BI alimenté par Excel vers une application full-stack Databricks Apps : backend Python Flask sur Lakebase, responsabilité du déploiement sur la plateforme et du CI/CD, et contribution au frontend Angular.
+\item Établi le flux de développement logiciel d'une équipe BI qui s'oriente vers les applications sur mesure : stratégie de branches et politique de pull requests, pipelines CI et structure des projets dans Azure DevOps.
+\item Créé la place de marché interne de l'équipe pour les skills et agents d'assistants de programmation IA : conçu plus de 10 skills et 2 agents (documents d'exigences et d'architecture, revue d'architecture par rapport au code source, automatisation Azure DevOps), distribués en plugins installables avec un pipeline de publication vers Artifactory.
+\end{resume_list}
+
+\headingBf{Président d'association étudiante, AGEEI-UQAM}{Avr. 2026 -- Présent}
+\begin{resume_list}
+\item Direction d'une équipe exécutive de 12 personnes représentant plus de 860 étudiants de premier cycle en informatique à l'UQAM.
+\item Lancé 4 clubs (IA, AWS Student Builder Group, programmation compétitive, UI/UX) et relancé le club de développement de jeux, pour un total de 135 membres actifs ; responsable technique de l'AWS Student Builder Group et présentateur aux clubs IA et programmation compétitive.
+\item Organisé le Hack Day Hacktoberfest de Montréal avec Major League Hacking pour environ 40 participants (présentateurs, salles, programme) et établi des partenariats avec PolyAI, l'AQIII et Bittensor (Exploit Summit) pour des ateliers et un séminaire.
+\item Accueilli une rencontre de recrutement avec RBC sur le campus ; relance en cours de la Journée Carrière de l'association pour l'hiver 2027, une première édition depuis 2020.
+\end{resume_list}
+
+\headingBf{VP Technologie d'association étudiante, AGEEI-UQAM}{Janv. 2026 -- Avr. 2026}
+\begin{resume_list}
+\item Développé une application Java sur Azure Functions intégrant Directus CMS à Google Calendar via webhooks et une tâche cron nocturne, déployée via GitLab CI.
+\item Administré une VM Azure de production hébergeant Vaultwarden, Snipe-IT et Directus CMS (cache Redis, SSO Google OpenID Connect) via Docker Compose et Nginx derrière Cloudflare, avec sauvegardes chiffrées automatisées vers Google Drive.
+\item Mis en place une plateforme CTFd et Nginx et conçu des défis CTF originaux couvrant la cryptographie, la stéganographie et la rétro-ingénierie. {\footnotesize \weblink{https://easter.ageei.org}{easter.ageei.org}}
+\end{resume_list}
+
+\headingBf{Auxiliaire d'enseignement en informatique, UQAM}{Oct. 2024 -- Mai 2026}
+\begin{resume_list}
+\item Conçu et animé des séances de laboratoire avec les responsables de cours et offert du tutorat en Java, POO, assembleur, Linux, Git, débogage et structures de données \& algorithmes.
+\item Animé des ateliers Linux et rédigé un guide d'installation et du matériel de laboratoire sur les structures de données et l'outillage logiciel. {\footnotesize \ghlink{https://github.com/George-Fam/LinuxInstallGuide}{George-Fam/LinuxInstallGuide} \ghlink{https://github.com/George-Fam/UQAM-Labos}{George-Fam/UQAM-Labos}}
+\end{resume_list}
 
 \section{Projets}
 
 \headingBf{Donate With Athena {\weblink{https://donatewithathena.com}{donatewithathena.com} \ghlink{https://github.com/George-Fam/DonateWithAthena}{George-Fam/DonateWithAthena}}}{}
 \begin{resume_list}
 \item Classé 2\textsuperscript{e} sur 14 équipes au hackathon Code to Give de Morgan Stanley pour Shield of Athena, un organisme qui soutient les femmes et les enfants confrontés à la violence conjugale.
-\item Collaboré au sein d'une équipe de 5 personnes pour développer une plateforme de dons gamifiée full-stack (Java, TypeScript, Spring Boot, Angular, MySQL, API REST) afin d'améliorer l'engagement des donateurs.
-\item Déployé sur Google Cloud Platform (GCP) avec Docker et Nginx pour conteneuriser les services backend.
+\item Conçu et développé, en équipe de 5, une plateforme de dons gamifiée full-stack (Java, TypeScript, Spring Boot, Angular, MySQL, API REST) afin d'améliorer l'engagement des donateurs.
+\item Conteneurisé les services backend avec Docker et déployé sur Google Cloud Platform (GCP) derrière Nginx.
 \item Mis en place un système d'automatisation des médias sociaux assisté par IA avec n8n pour centraliser la publication multi-plateforme et simplifier la rédaction de contenu pour l'équipe marketing.
 \end{resume_list}
 
-\headingBf{Fork Open Source -- plezy-tizen {\ghlink{https://github.com/George-Fam/plezy-tizen}{George-Fam/plezy-tizen}}}{}
+\newpage
+
+\headingBf{OptiFrame -- Hackathon CodeML 2026 {\weblink{https://optiframe.app}{optiframe.app} \ghlink{https://github.com/George-Fam/optiframe}{George-Fam/optiframe}}}{}
 \begin{resume_list}
-\item Utilisé Dart et C\# pour ajouter la prise en charge de Samsung Tizen TV à un client Plex/Jellyfin basé sur Flutter et distribué sur l'App Store et Google Play, en écrivant de zéro un lecteur multimédia natif en C\# avec rendu par superposition matérielle.
-\item Utilisé les method channels et event channels de Flutter pour relier l'interface Dart au lecteur natif C\#, en implémentant le contrôle de lecture, le déplacement dans la vidéo et le routage des touches de télécommande TV des deux côtés du pont.
-\item Utilisé GitHub Actions pour étendre le pipeline CI/CD du projet avec une tâche de compilation Tizen, produisant un artéfact TPK signé pour la publication.
+\item Dirigé le développement, en équipe de 4, d'une application qui transforme la photo d'un verre de lunettes recyclé en monture imprimable en 3D, pour le défi Santé Numérique Sans Frontières.
+\item Développé le pipeline de mesure dans une API Spring Boot : redressement par marqueurs ArUco (OpenCV), segmentation du verre par un modèle U-Net exporté en ONNX et calcul des cotes, avec un écart d'environ 0,2 mm en tests pour une cible de 0,5 mm (ISO 12870).
+\item Développé une PWA Angular avec génération de la monture en STL (manifold-3d) et aperçu 3D (three.js), ainsi qu'une CI GitHub Actions (formatage, lint, tests, builds).
 \end{resume_list}
 
-\headingBf{AGEEI.org -- Plateforme d'Association Étudiante {\weblink{https://ageei.org}{ageei.org} \gllink{https://gitlab.com/ageei/ageei.org}{gitlab.com/ageei/ageei.org}}}{}
+\headingBf{Fork open source -- plezy-tizen {\ghlink{https://github.com/George-Fam/plezy-tizen}{George-Fam/plezy-tizen}}}{}
 \begin{resume_list}
-\item Développé une plateforme full-stack avec un frontend Angular 21 + Angular Material déployé sur Azure Static Web Apps et un backend Java 17 serverless sur Azure Functions, avec déploiements automatisés via GitLab CI.
-\item Livré une page Publications, une recherche FAQ en temps réel et une chronologie rétractable.
-\item Implémenté une synchronisation calendrier bi-déclencheur intégrant Directus CMS à Google Calendar via webhooks et une tâche cron nocturne, en utilisant l'impersonation de compte de service Google Workspace.
+\item Ajouté la prise en charge de Samsung Tizen TV à un client Plex/Jellyfin basé sur Flutter et distribué sur l'App Store et Google Play, en écrivant de zéro un lecteur multimédia natif en C\# avec rendu par superposition matérielle.
+\item Relié l'interface Dart au lecteur natif C\# avec les method channels et event channels de Flutter, en implémentant le contrôle de lecture, le déplacement dans la vidéo et le routage des touches de télécommande des deux côtés.
+\item Étendu le pipeline CI/CD GitHub Actions du projet avec une tâche de compilation Tizen produisant un artéfact TPK signé pour la publication.
 \end{resume_list}
 
-\headingBf{Automatisation CV \& Lettres de Motivation LaTeX {\ghlink{https://github.com/George-Fam/Resume}{George-Fam/Resume}}}{}
+\headingBf{AGEEI.org -- Plateforme d'association étudiante {\weblink{https://ageei.org}{ageei.org} \gllink{https://gitlab.com/ageei/ageei.org}{gitlab.com/ageei/ageei.org}}}{}
 \begin{resume_list}
-\item Conçu un pipeline d'automatisation PowerShell \& Python pour générer et compiler des CV LaTeX multi-versions.
-\item Mis en place de workflows GitHub Actions (CI/CD) pour automatiser la validation, le versionnement et des builds PDF reproductibles, éliminant la compilation manuelle.
+\item Développé une plateforme full-stack avec un frontend Angular 21 + Angular Material sur Azure Static Web Apps et un backend Java 17 serverless sur Azure Functions, avec contenu géré dans Directus CMS et déploiements automatisés via GitLab CI.
 \end{resume_list}
 
-\headingBf{Implémentation d'un Arbre AVL {\ghlink{https://github.com/George-Fam/AVLTree}{George-Fam/AVLTree}}}{}
+\headingBf{Contributions open source -- pgloader, linutil}{}
 \begin{resume_list}
-\item Implémenté en C++ un arbre AVL avec opérations d'ensemble et tests pour valider la justesse et la performance ; classé 1\textsuperscript{er} sur 116 lors de l'évaluation du cours.
+\item En évaluant des voies d'ingestion MSSQL vers PostgreSQL, diagnostiqué et corrigé une régression de performance de pgloader v4 (6,5k étoiles) : la source MSSQL n'appliquait les filtres INCLUDING/EXCLUDING qu'après avoir interrogé les métadonnées de chaque table (\weblink{https://github.com/dimitri/pgloader/pull/1785}{PR \#1785}).
+\item Diagnostiqué et corrigé un échec à l'exécution dans le script d'installation d'Ollama de linutil, une boîte à outils Linux communautaire de 5k étoiles (\weblink{https://github.com/ChrisTitusTech/linutil/pull/1223}{PR \#1223}).
 \end{resume_list}
 
-\headingBf{Contribution Open Source -- linutil {\ghlink{https://github.com/ChrisTitusTech/linutil}{ChrisTitusTech/linutil}}}{}
+\section{Autre expérience}
+
+\headingBf{Assistant technique en pharmacie, Jean Coutu}{Sept. 2022 -- Fév. 2025}
 \begin{resume_list}
-\item Diagnostiqué et corrigé un échec à l'exécution dans le script d'installation d'Ollama d'une boîte à outils Linux communautaire de 5k étoiles (\weblink{https://github.com/ChrisTitusTech/linutil/pull/1223}{PR \#1223}), rétablissant un processus d'installation brisé pour les utilisateurs.
-\end{resume_list}
-
-\section{Expérience}
-
-\headingBf{Président d'Association Étudiante, AGEEI-UQAM}{Avr. 2026 -- Présent}
-\headingBf{VP Technologie d'Association Étudiante, AGEEI-UQAM}{Janv. 2026 -- Avr. 2026}
-\begin{resume_list}
-\item Développé une application Java sur Azure Functions intégrant Directus CMS à Google Calendar via webhooks et une tâche cron nocturne, déployée via GitLab CI.
-\item Administré une VM Azure de production hébergeant Vaultwarden, Snipe-IT et Directus CMS (cache Redis, SSO Google OpenID Connect) via Docker Compose et Nginx, avec SSL Cloudflare Full et sauvegardes chiffrées automatisées vers Google Drive avec rétention de 30 jours.
-\item Mis en place une plateforme CTFd et Nginx et conçu des défis CTF originaux couvrant la cryptographie, la stéganographie et la rétro-ingénierie. {\footnotesize \weblink{https://easter.ageei.org}{easter.ageei.org}}
-\item Développé un tableau de bord JavaScript automatisant la gestion de l'admissibilité aux photos de graduation avec notifications par courriel HTML.
-\end{resume_list}
-
-\headingBf{Auxiliaire d'Enseignement en Informatique, UQAM}{Oct. 2024 -- Mai 2026}
-\begin{resume_list}
-\item Collaboré avec les responsables de cours pour concevoir et animer des séances de laboratoire couvrant Java, Linux, Git, le débogage et les bases de la programmation orientée objet.
-\item Tutorat auprès d'étudiants en Java, POO, assembleur, Linux et structures de données \& algorithmes.
-\item Animation d'ateliers Linux et rédaction d'un guide d'installation pour les simplifier. {\footnotesize \ghlink{https://github.com/George-Fam/LinuxInstallGuide}{George-Fam/LinuxInstallGuide}}
-\item Développement de matériel pédagogique pour renforcer les connaissances. {\footnotesize \ghlink{https://github.com/George-Fam/UQAM-Labos}{George-Fam/UQAM-Labos}}
-\end{resume_list}
-
-\section{Autre Expérience}
-
-\headingBf{Assistant Technique en Pharmacie, Jean Coutu}{Sept. 2022 -- Fév. 2025}
-\begin{resume_list}
-\item Service à la clientèle à haut volume, saisie de données médicales et priorisation des demandes tout en maintenant l'exactitude, la confidentialité et le respect des délais critiques.
-\end{resume_list}
-
-\headingBf{Gérant Adjoint, Couche-Tard}{Juil. 2018 -- Juil. 2020}
-\begin{resume_list}
-\item Suivi des rentrées de caisse quotidiennes, améliorant l'exactitude et réduisant les écarts.
-\item Augmentation des ventes des fêtes de 12\% grâce à des promotions efficaces.
-\item Organisation de la marchandise en caisse pour améliorer la visibilité et stimuler les ventes.
-\item Formation des nouveaux membres d'équipe sur les systèmes POS et le service à la clientèle.
+\item Assuré un service à la clientèle à haut volume et la saisie de données médicales, en priorisant les demandes tout en maintenant l'exactitude, la confidentialité et le respect des délais critiques.
 \end{resume_list}
 
 \section{Compétences}
 
 \begin{skill_list}
-  \skill{Langages}{Java, C, C++, TypeScript, JavaScript, Bash, PowerShell, Python}
-  \skill{Frontend}{Angular, Angular Material, HTML/CSS, SCSS, Tailwind CSS}
-  \skill{Backend}{Spring Boot (MVC, Spring Data JPA), API REST, MySQL, Oracle SQL}
-  \skill{Tests}{JUnit, Mockito, BATS}
-  \skill{DevOps}{Docker, Docker Compose, Nginx, Git, Maven, GitHub Actions, GitLab CI}
-  \skill{Cloud}{Google Cloud Platform (GCP), Azure}
+  \skill{Langages}{Java, C++, TypeScript, JavaScript, Bash, PowerShell, Python}
+  \skill{Frontend}{Angular, Angular Material, HTML/CSS, SCSS}
+  \skill{Backend}{Spring Boot (MVC, Data JPA, Modulith), Flask, API REST, PostgreSQL, Azure SQL, MySQL}
+  \skill{Tests}{JUnit, Mockito}
+  \skill{DevOps}{Docker, Docker Compose, Nginx, Git, Maven, GitHub Actions, GitLab CI, Azure DevOps}
+  \skill{Cloud \& Données}{Azure, Google Cloud Platform (GCP), Databricks, Power BI, OpenCV}
   \skill{Langues}{Français, Anglais, Arabe}
 \end{skill_list}
 
